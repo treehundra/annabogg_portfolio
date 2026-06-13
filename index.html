@@ -282,26 +282,27 @@ footer{background:var(--text);color:#fff;padding:48px 24px 32px;}
 <section class="slide" id="slide-2" style="padding:64px 40px;">
   <div style="display:grid;grid-template-columns:42fr 58fr;gap:52px;align-items:start;">
 
-    <!-- LEFT: real notebook photo, text overlaid precisely inside the page area -->
-    <div style="position:relative;">
+    <!-- LEFT: notebook — overflow visible so tabs show naturally -->
+    <div style="position:relative;overflow:visible;">
       <img src="photos/bg_notebook.jpg" alt="" style="width:100%;display:block;">
-      <div style="position:absolute;top:22%;left:18%;right:8%;bottom:12%;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
-        <h2 style="font-weight:900;font-size:clamp(18px,2.6vw,36px);letter-spacing:-.02em;text-transform:uppercase;line-height:1;">Experience</h2>
+      <!-- page area: top 22%, left 18% (after spiral), right stays inside tabs which are part of image -->
+      <div style="position:absolute;top:22%;left:18%;right:14%;bottom:12%;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+        <h2 style="font-weight:900;font-size:clamp(16px,2.4vw,32px);letter-spacing:-.02em;text-transform:uppercase;line-height:1;">Experience</h2>
         <div>
-          <div style="font-family:var(--script);font-size:clamp(12px,1.6vw,22px);line-height:1;color:#1c1c1c;">2024 — now</div>
-          <div style="font-size:clamp(8px,0.82vw,11px);line-height:1.4;color:#333;margin-top:1.5%;">Национальный исследовательский университет <b>«Высшая школа экономики»</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: брендинг в индустрии моды</div>
+          <div style="font-family:var(--script);font-size:clamp(11px,1.5vw,20px);line-height:1;color:#1c1c1c;">2024 — now</div>
+          <div style="font-size:clamp(7px,0.76vw,10px);line-height:1.4;color:#333;margin-top:1%;">Национальный исследовательский университет <b>«Высшая школа экономики»</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: брендинг в индустрии моды</div>
         </div>
         <div>
-          <div style="font-family:var(--script);font-size:clamp(12px,1.6vw,22px);line-height:1;color:#1c1c1c;">2022 – 2024</div>
-          <div style="font-size:clamp(8px,0.82vw,11px);line-height:1.4;color:#333;margin-top:1.5%;"><b>Британская высшая школа дизайна</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: дизайн одежды</div>
+          <div style="font-family:var(--script);font-size:clamp(11px,1.5vw,20px);line-height:1;color:#1c1c1c;">2022 – 2024</div>
+          <div style="font-size:clamp(7px,0.76vw,10px);line-height:1.4;color:#333;margin-top:1%;"><b>Британская высшая школа дизайна</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: дизайн одежды</div>
         </div>
         <div>
-          <div style="font-family:var(--script);font-size:clamp(12px,1.6vw,22px);line-height:1;color:#1c1c1c;">2021 – 2022</div>
-          <div style="font-size:clamp(8px,0.82vw,11px);line-height:1.4;color:#333;margin-top:1.5%;"><b>Британская высшая школа дизайна</b><br>Foundation Art &amp; Design<br>Специализация: современное искусство</div>
+          <div style="font-family:var(--script);font-size:clamp(11px,1.5vw,20px);line-height:1;color:#1c1c1c;">2021 – 2022</div>
+          <div style="font-size:clamp(7px,0.76vw,10px);line-height:1.4;color:#333;margin-top:1%;"><b>Британская высшая школа дизайна</b><br>Foundation Art &amp; Design<br>Специализация: современное искусство</div>
         </div>
         <div>
-          <div style="font-family:var(--script);font-size:clamp(12px,1.6vw,22px);line-height:1;color:#1c1c1c;">2013 – 2021</div>
-          <div style="font-size:clamp(8px,0.82vw,11px);line-height:1.4;color:#333;margin-top:1.5%;"><b>Архитектурная школа СТАРТ при МАрхИ</b><br>Курсы: дизайн одежды, профессиональный архитектурный класс</div>
+          <div style="font-family:var(--script);font-size:clamp(11px,1.5vw,20px);line-height:1;color:#1c1c1c;">2013 – 2021</div>
+          <div style="font-size:clamp(7px,0.76vw,10px);line-height:1.4;color:#333;margin-top:1%;"><b>Архитектурная школа СТАРТ при МАрхИ</b><br>Курсы: дизайн одежды, профессиональный архитектурный класс</div>
         </div>
       </div>
     </div>
@@ -309,9 +310,10 @@ footer{background:var(--text);color:#fff;padding:48px 24px 32px;}
     <!-- RIGHT -->
     <div style="display:flex;flex-direction:column;gap:24px;">
 
-      <!-- White card: top half only via background-image -->
-      <div style="position:relative;aspect-ratio:675/580;background:url(photos/bg_card_white.jpg) left top / 100% 200% no-repeat;border-radius:4px;overflow:hidden;">
-        <div style="position:absolute;inset:0;padding:10% 12% 8% 10%;display:flex;flex-direction:column;justify-content:center;">
+      <!-- White card: top card only (cropped image) -->
+      <div style="position:relative;border-radius:4px;overflow:hidden;">
+        <img src="photos/bg_card_top.jpg" alt="" style="width:100%;display:block;">
+        <div style="position:absolute;inset:0;padding:12% 12% 8% 10%;display:flex;flex-direction:column;justify-content:center;">
           <div style="font-family:var(--script);font-size:clamp(14px,1.7vw,24px);color:#1c1c1c;margin-bottom:8px;">Editorial. Fashion magazines</div>
           <ul style="list-style:none;padding:0;margin:0;font-size:clamp(11px,1.05vw,14px);line-height:1.7;color:#222;">
             <li>· «Мнение Редакции» с Анджелиной Смерфит</li>
