@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анна Богомолова — Portfolio | Стилист &amp; Креативный Продюсер</title>
+<meta name="description" content="Портфолио Анны Богомоловой — стилист, креативный продюсер, ассистент креативного директора. Москва.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Pinyon+Script&family=Permanent+Marker&family=Caveat:wght@600&display=swap');
+
+:root{
+  --bg:#ffffff; --text:#111111; --accent:#E5251D; --muted:#7d7d7d;
+  --light:#f5f5f5; --paper:#fafafa; --ink:#1a1a1a;
+  --nav-bg:rgba(255,255,255,0.92);
+  --shadow:0 1px 8px rgba(0,0,0,0.08);
+  --serif:Georgia,'Times New Roman',serif;
+  --script:'Pinyon Script','Brush Script MT','Segoe Script',cursive;
+  --marker:'Caveat','Segoe Script','Comic Sans MS',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+
+/* ---------- Navigation ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;}
+nav.hidden{transform:translateY(-100%);}
+nav.scrolled{box-shadow:var(--shadow);}
+.nav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-brand{font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);text-decoration:none;}
+.nav-brand span{color:var(--accent);}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center;}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:6px;transition:all .2s ease;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--light);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+.hamburger span{display:block;width:20px;height:2px;background:var(--text);margin:4px 0;transition:all .3s ease;}
+
+/* ---------- Slide shell ---------- */
+.slide{position:relative;width:100%;max-width:1320px;margin:0 auto;padding:64px 40px;min-height:60vh;scroll-margin-top:70px;}
+.slide:first-of-type{padding-top:104px;}
+.slide + .slide{border-top:1px solid rgba(0,0,0,.05);}
+
+/* Big display title */
+.huge{font-weight:900;letter-spacing:-.02em;line-height:.95;text-transform:uppercase;color:var(--ink);font-size:clamp(40px,7vw,104px);}
+.mid{font-weight:900;letter-spacing:-.01em;text-transform:uppercase;color:var(--ink);font-size:clamp(34px,5.5vw,76px);line-height:1;}
+.script{font-family:var(--script);font-weight:400;}
+.serif{font-family:var(--serif);}
+
+/* ---------- Tape ---------- */
+.tape{position:absolute;width:120px;height:34px;background:linear-gradient(180deg,rgba(214,214,210,.55),rgba(228,228,224,.5));box-shadow:0 2px 5px rgba(0,0,0,.12);z-index:5;}
+.tape::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.0) 0 5px,rgba(255,255,255,.22) 5px 10px);}
+.tape.dark{background:linear-gradient(180deg,rgba(180,178,170,.6),rgba(196,194,186,.55));}
+
+/* ---------- Polaroid ---------- */
+.polaroid{background:#fff;padding:12px 12px 38px;box-shadow:0 10px 30px rgba(0,0,0,.16);position:relative;}
+.polaroid img{display:block;width:100%;height:100%;object-fit:cover;}
+.polaroid .cap{position:absolute;left:0;right:0;bottom:10px;text-align:center;font-family:var(--marker);font-size:13px;color:#555;}
+
+/* ---------- Torn paper ---------- */
+.torn{position:relative;background:#fcfcfa;box-shadow:0 14px 34px rgba(0,0,0,.10);
+  filter:drop-shadow(0 2px 1px rgba(0,0,0,.04));}
+.torn::before{content:"";position:absolute;inset:0;background:
+   radial-gradient(circle at 30% 20%,rgba(0,0,0,.015),transparent 60%),
+   linear-gradient(135deg,#ffffff,#f3f3ef);
+   clip-path:var(--tornclip);z-index:0;}
+.torn > *{position:relative;z-index:1;}
+.torn.t1{--tornclip:polygon(2% 4%,12% 1%,28% 5%,44% 1%,60% 4%,76% 0%,92% 4%,99% 2%,98% 22%,100% 44%,98% 66%,100% 86%,97% 98%,82% 96%,64% 100%,46% 96%,30% 100%,14% 97%,3% 99%,1% 80%,3% 58%,0% 36%,2% 18%);}
+.torn.t2{--tornclip:polygon(3% 2%,20% 6%,40% 1%,60% 5%,80% 1%,96% 5%,99% 24%,97% 48%,100% 70%,96% 92%,98% 99%,78% 95%,58% 100%,38% 96%,18% 100%,4% 96%,2% 76%,5% 52%,1% 30%,4% 14%);}
+
+/* ---------- Spiral binding ---------- */
+.spiralcard{position:relative;background:#fff;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.12);border:1px solid #ececec;}
+.spiral{position:absolute;left:-26px;top:18px;bottom:18px;width:46px;z-index:6;}
+
+/* ---------- Notebook tabs ---------- */
+.tab{position:absolute;right:0;display:flex;align-items:center;justify-content:center;width:42px;background:#efeeea;border:1px solid #dcdbd5;border-right:none;border-radius:7px 0 0 7px;box-shadow:-2px 2px 5px rgba(0,0,0,.05);}
+.tab span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:13px;letter-spacing:.04em;color:#555;font-family:var(--serif);padding:6px 0;}
+
+/* ---------- Note card on paperclip ---------- */
+.notecard{position:relative;background:#f3f1ea;border:1px solid #e4e1d6;box-shadow:0 10px 26px rgba(0,0,0,.10);padding:22px 24px;}
+.notecard .cardtitle{font-family:var(--script);font-size:30px;line-height:1;margin-bottom:12px;color:#1c1c1c;}
+.clip-paper{position:absolute;width:34px;height:78px;z-index:7;}
+
+/* ---------- Binder clip ---------- */
+.binder{position:absolute;z-index:8;}
+
+/* ---------- Film strip ---------- */
+.filmstrip{position:relative;background:#0b0b0b;padding:30px 16px;box-shadow:0 14px 34px rgba(0,0,0,.3);}
+.filmstrip::before,.filmstrip::after{content:"";position:absolute;left:6px;right:6px;height:14px;background-image:radial-gradient(#0b0b0b 38%,transparent 40%);background-size:20px 14px;background-repeat:repeat-x;background-color:#fff;}
+.filmstrip::before{top:8px;} .filmstrip::after{bottom:8px;}
+.filmstrip img{display:block;width:100%;}
+.filmstrip .fno{position:absolute;color:#fff;font-size:9px;font-family:var(--serif);letter-spacing:.1em;}
+
+/* ---------- ID badge ---------- */
+.badge{position:relative;background:rgba(255,255,255,.55);border:1.5px solid rgba(0,0,0,.18);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.10);backdrop-filter:blur(2px);padding:26px 28px;}
+.badge::before{content:"";position:absolute;top:-30px;left:50%;transform:translateX(-50%);width:26px;height:42px;background:linear-gradient(#d9d9d9,#bdbdbd);border:1px solid #9a9a9a;border-radius:4px;}
+.badge::after{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:#cfcfcf;border:1px solid #9a9a9a;}
+
+/* ---------- Hang tag (language) ---------- */
+.hangtag{position:relative;background:#fff;border:1px solid #e6e6e6;box-shadow:0 10px 26px rgba(0,0,0,.12);padding:26px 22px;}
+.hangtag .hl{display:inline;background:linear-gradient(transparent 55%,rgba(229,37,29,.35) 55% 92%,transparent 92%);}
+
+/* ---------- Logos ---------- */
+.logos{display:flex;flex-direction:column;gap:14px;align-items:flex-start;}
+.logorow{display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+.logo{font-weight:800;letter-spacing:.02em;font-size:20px;display:inline-flex;align-items:center;gap:7px;}
+.logo.flowwow{color:#ff5a4d;} .logo.flowwow b{font-weight:900;}
+.logo.samokat{color:#ff3b30;}
+.logo.tsf{font-size:13px;color:#222;border:1px solid #cfcfcf;padding:6px 10px;border-radius:4px;background:#f7f7f5;line-height:1.1;}
+.logo.lo{font-family:var(--serif);font-style:italic;font-weight:700;font-size:30px;}
+
+/* ---------- Lists ---------- */
+.dlist{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.dlist li{position:relative;padding-left:16px;line-height:1.45;}
+.dlist li::before{content:"·";position:absolute;left:2px;top:-1px;font-weight:700;}
+.dlist.serif li{font-family:var(--serif);}
+.dlist.bold li{font-weight:700;}
+
+/* ---------- Gallery ---------- */
+.gallery{display:flex;flex-direction:column;gap:16px;margin-top:30px;}
+.grow{display:flex;gap:14px;flex-wrap:wrap;}
+.cell{flex-grow:1;flex-shrink:1;flex-basis:0;border-radius:2px;overflow:hidden;background:#f2f2f2;min-width:120px;}
+.cell img{display:block;width:100%;height:100%;object-fit:cover;}
+.caps{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 40px;margin-top:30px;}
+.caps .cap{font-weight:700;line-height:1.45;max-width:48%;font-size:clamp(14px,1.4vw,18px);}
+.caps .cap.serif{font-family:var(--serif);}
+.caps .cap.right{text-align:right;margin-left:auto;}
+.lnk{color:var(--text);text-decoration:underline;text-underline-offset:3px;font-weight:700;}
+.lnk:hover{color:var(--accent);}
+.linklist{display:flex;flex-direction:column;gap:6px;}
+
+/* ---------- Contact block ---------- */
+.contact{text-align:center;line-height:1.7;font-size:clamp(15px,1.5vw,19px);}
+.contact .k{font-weight:700;}
+.contact a{color:var(--text);text-decoration:underline;text-underline-offset:3px;}
+.contact a:hover{color:var(--accent);}
+
+/* ---------- Doodles ---------- */
+.doodle{pointer-events:none;z-index:4;display:block;}
+
+/* ---------- Progress / indicator / scrolltop / footer ---------- */
+.progress-bar{position:fixed;top:56px;left:0;height:2px;background:var(--accent);z-index:999;transition:width .1s linear;width:0;}
+.page-indicator{position:fixed;right:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:100;}
+.page-dot{width:8px;height:8px;border-radius:50%;background:rgba(0,0,0,.15);border:none;cursor:pointer;transition:all .3s ease;padding:0;}
+.page-dot.active{background:var(--accent);transform:scale(1.4);}
+.page-dot:hover{background:var(--text);transform:scale(1.3);}
+.scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--text);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(20px);transition:all .3s ease;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.2);}
+.scroll-top.visible{opacity:1;transform:translateY(0);}
+.scroll-top:hover{background:var(--accent);}
+footer{background:var(--text);color:#fff;padding:48px 24px 32px;}
+.footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;}
+.footer-col h3{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:16px;font-weight:600;}
+.footer-col p,.footer-col a{color:rgba(255,255,255,.8);font-size:14px;line-height:1.7;text-decoration:none;transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{max-width:1400px;margin:32px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.3);}
+
+/* ---------- reveal ---------- */
+.slide{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease;}
+.slide.visible{opacity:1;transform:translateY(0);}
+
+/* ---------- layout helpers for design slides ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.stack{display:flex;flex-direction:column;gap:22px;}
+.scatter{position:relative;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .two{grid-template-columns:1fr;gap:34px;}
+  .slide{padding:48px 20px;}
+}
+@media (max-width:768px){
+  .nav-links{display:none;}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:var(--nav-bg);backdrop-filter:blur(20px);padding:16px;border-bottom:1px solid rgba(0,0,0,.06);box-shadow:var(--shadow);}
+  .hamburger{display:block;}
+  .footer-inner{grid-template-columns:1fr;gap:24px;}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;}
+  .page-indicator{display:none;}
+  .caps .cap{max-width:100%;}
+  .caps .cap.right{text-align:left;}
+  /* simplify scatter decorations on mobile */
+  .scatter .abs{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;margin:0 auto 18px!important;}
+  .tab,.spiral,.binder,.clip-paper,.doodle{display:none!important;}
+  .filmstrip{padding:18px 10px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .slide{opacity:1;transform:none;transition:none;}
+  .scroll-top{transition:none;}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#slide-1" class="nav-brand">Богомолова<span>.</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#slide-1">Portfolio</a></li>
+      <li><a href="#slide-2">Experience</a></li>
+      <li><a href="#slide-3">Publications</a></li>
+      <li><a href="#slide-4">Skills</a></li>
+      <li><a href="#slide-5">Editorial</a></li>
+      <li><a href="#slide-9">Prod &amp; Style</a></li>
+      <li><a href="#slide-16">Shows</a></li>
+      <li><a href="#slide-17">Contacts</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="progress-bar" id="progressBar"></div>
+<div class="page-indicator" id="pageIndicator">
+  <button class="page-dot" data-slide="1" aria-label="Слайд 1"></button>
+  <button class="page-dot" data-slide="2" aria-label="Слайд 2"></button>
+  <button class="page-dot" data-slide="3" aria-label="Слайд 3"></button>
+  <button class="page-dot" data-slide="4" aria-label="Слайд 4"></button>
+  <button class="page-dot" data-slide="5" aria-label="Слайд 5"></button>
+  <button class="page-dot" data-slide="6" aria-label="Слайд 6"></button>
+  <button class="page-dot" data-slide="7" aria-label="Слайд 7"></button>
+  <button class="page-dot" data-slide="8" aria-label="Слайд 8"></button>
+  <button class="page-dot" data-slide="9" aria-label="Слайд 9"></button>
+  <button class="page-dot" data-slide="10" aria-label="Слайд 10"></button>
+  <button class="page-dot" data-slide="11" aria-label="Слайд 11"></button>
+  <button class="page-dot" data-slide="12" aria-label="Слайд 12"></button>
+  <button class="page-dot" data-slide="13" aria-label="Слайд 13"></button>
+  <button class="page-dot" data-slide="14" aria-label="Слайд 14"></button>
+  <button class="page-dot" data-slide="15" aria-label="Слайд 15"></button>
+  <button class="page-dot" data-slide="16" aria-label="Слайд 16"></button>
+  <button class="page-dot" data-slide="17" aria-label="Слайд 17"></button>
+</div>
+<main>
+
+<section class="slide scatter" id="slide-1">
+  <div style="text-align:center;position:relative;">
+    <h1 class="huge" style="display:inline-block;position:relative;">PORTFOLIO<span style="position:absolute;right:-46px;top:-30px;"><svg class="doodle" width="150" height="160" viewBox="0 0 150 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 30 C70 10,110 20,100 55 C92 82,52 78,46 52 C42 30,86 28,96 48 C104 64,70 74,58 58"
+    stroke="#E5251D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 70 C92 60,120 70,114 100 C108 124,80 126,82 100 C84 82,112 86,110 104"
+    stroke="#111" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M118 60 C128 64,132 78,126 92" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg></span></h1>
+    <div style="font-family:var(--marker);font-size:clamp(34px,5.2vw,72px);letter-spacing:.04em;margin-top:6px;color:#161616;">Богомолова Анна</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:30px;align-items:center;margin-top:36px;">
+    <div style="position:relative;display:flex;justify-content:center;">
+      <div class="abs polaroid" style="width:240px;transform:rotate(-4deg);">
+        <span class="tape" style="top:-16px;left:-20px;transform:rotate(-32deg);"></span>
+        <span class="tape" style="top:-16px;right:-20px;transform:rotate(34deg);"></span>
+        <span class="tape" style="bottom:-12px;left:14px;transform:rotate(28deg);"></span>
+        <img src="photos/d1_portrait.jpg" alt="Портрет — Анна Богомолова">
+      </div>
+      <span class="doodle" style="position:absolute;left:-10px;bottom:-70px;"><svg class="doodle" width="230" height="160" viewBox="0 0 230 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 40 L40 18 L52 44 L70 20 L82 46 L100 22 L112 48" stroke="#E5251D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 96 C60 78,140 86,210 100 C150 108,70 112,18 124 C90 120,170 124,206 134"
+    stroke="#111" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 110 C90 100,160 104,200 116" stroke="#111" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></span>
+    </div>
+    <div style="padding:10px 0;"><div class="contact">
+  <p>Стилист, креативный продюсер,<br>ассистент креативного директора</p>
+  <p style="margin-top:14px;"><span class="k">Контакты:</span></p>
+  <p>Телефон: +7 916 838-06-76</p>
+  <p>Email: <a href="mailto:BogomolovaAnna.sty@yandex.ru">BogomolovaAnna.sty@yandex.ru</a></p>
+  <p>Instagram / Telegram : <a href="https://instagram.com/anyabogg" target="_blank" rel="noopener">@anyabogg</a></p>
+  <p><span class="k">Город:</span> Москва</p>
+  <p><span class="k">Дата рождения:</span> 26.11.2004</p>
+</div></div>
+    <div style="display:flex;justify-content:center;">
+      <div class="abs polaroid" style="width:280px;transform:rotate(3deg);">
+        <span class="tape dark" style="top:-16px;left:50%;transform:translateX(-50%) rotate(-6deg);"></span>
+        <img src="photos/d1_styling.jpg" alt="Стилизация в работе">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide" id="slide-2">
+  <div class="two" style="gap:40px;">
+    <div class="spiralcard" style="padding:28px 34px 34px 40px;">
+      <svg class="spiral" viewBox="0 0 46 680" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:100%;"><ellipse cx="23" cy="20.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 8.8 Q-2 20.0 8 32.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="60.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 48.8 Q-2 60.0 8 72.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="100.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 88.8 Q-2 100.0 8 112.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="140.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 128.8 Q-2 140.0 8 152.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="180.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 168.8 Q-2 180.0 8 192.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="220.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 208.8 Q-2 220.0 8 232.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="260.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 248.8 Q-2 260.0 8 272.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="300.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 288.8 Q-2 300.0 8 312.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="340.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 328.8 Q-2 340.0 8 352.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="380.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 368.8 Q-2 380.0 8 392.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="420.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 408.8 Q-2 420.0 8 432.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="460.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 448.8 Q-2 460.0 8 472.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="500.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 488.8 Q-2 500.0 8 512.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="540.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 528.8 Q-2 540.0 8 552.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="580.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 568.8 Q-2 580.0 8 592.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="620.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 608.8 Q-2 620.0 8 632.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="660.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 648.8 Q-2 660.0 8 672.0" stroke="#b9b9b9" stroke-width="3"/></svg>
+      <h2 class="mid" style="margin-bottom:18px;">Experience</h2>
+      <div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2024 — now</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;">Национальный исследовательский университет <b>«Высшая школа экономики»</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: брендинг в индустрии моды</div></div><div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2022 – 2024</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;"><b>Британская высшая школа дизайна</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: дизайн одежды</div></div><div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2021 – 2022</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;"><b>Британская высшая школа дизайна</b><br>Foundation Art &amp; Design<br>Специализация: современное искусство</div></div><div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2013 – 2021</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;"><b>Архитектурная школа СТАРТ при МАрхИ</b><br>Курсы: дизайн одежды, профессиональный архитектурный класс</div></div>
+      <div class="tab" style="top:8px;height:96px;"><span>A &amp; P</span></div><div class="tab" style="top:114px;height:150px;"><span>Assessment</span></div><div class="tab" style="top:274px;height:150px;"><span>Calculations</span></div><div class="tab" style="top:434px;height:96px;"><span>Coding</span></div><div class="tab" style="top:540px;height:96px;"><span>Equipment</span></div><div class="tab" style="top:646px;height:150px;"><span>Injections</span></div>
+    </div>
+    <div class="stack">
+      <div class="notecard" style="margin-top:6px;">
+        <span class="clip-paper" style="top:-30px;right:40px;transform:rotate(8deg);"><svg viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+  <path d="M14 14 C14 6,28 6,28 14 L28 70 C28 84,8 84,8 70 L8 26 C8 16,22 16,22 26 L22 64"
+    stroke="#a9a9a9" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M16 14 C16 8,26 8,26 14 L26 70 C26 82,10 82,10 70 L10 26 C10 18,20 18,20 26 L20 64"
+    stroke="#d6d6d6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg></span>
+        <div class="cardtitle">Editorial. Fashion magazines</div>
+        <ul class="dlist serif bold"><li>«Мнение Редакции» с Анджелиной Смерфит</li><li>«Сноб» с Иваном Янковским</li><li>L’Officiel × Неделя Вьетнама в Москве</li><li>Open Call Badlon Magazine</li></ul>
+      </div>
+      <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div class="polaroid" style="width:170px;transform:rotate(-3deg);flex:none;">
+          <img src="photos/d2_snob.jpg" alt="Сноб — съёмка">
+        </div>
+        <div class="notecard" style="flex:1;min-width:240px;">
+          <span class="clip-paper" style="top:-30px;right:30px;transform:rotate(-6deg);"><svg viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+  <path d="M14 14 C14 6,28 6,28 14 L28 70 C28 84,8 84,8 70 L8 26 C8 16,22 16,22 26 L22 64"
+    stroke="#a9a9a9" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M16 14 C16 8,26 8,26 14 L26 70 C26 82,10 82,10 70 L10 26 C10 18,20 18,20 26 L20 64"
+    stroke="#d6d6d6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg></span>
+          <div class="cardtitle">Lookbook Production</div>
+          <ul class="dlist serif bold"><li>Ostin Kids</li><li>Kapsula</li><li>Parit</li><li>Botrois</li></ul>
+          <div class="cardtitle" style="margin-top:16px;">TV shows Production</div>
+          <ul class="dlist serif bold"><li>Финал реалити-шоу «Королева ринга»</li><li>Рекламная кампания Озон Банка с Гошей Куценко</li><li>Шоу «Страсти по Фишеру» со Славой КПСС, Яном Топлесом и Азаматом Мусагалиевым</li><li>Музыкальный клип Ozerniki</li><li>Музыкальный клип Ozerniki × Feduk</li></ul>
+        </div>
+      </div>
+      <h2 class="mid" style="text-align:right;margin-top:10px;">Work cases</h2>
+    </div>
+  </div>
+</section>
+<section class="slide scatter" id="slide-3">
+  <div class="two" style="gap:46px;align-items:start;">
+    <div>
+      <div class="torn t1" style="padding:40px 44px 46px;position:relative;">
+        <span class="binder" style="top:-46px;left:60px;"><svg width="116" height="92" viewBox="0 0 116 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M30 86 L86 86 L96 46 L20 46 Z" fill="#1b1b1b"/>
+  <rect x="20" y="40" width="76" height="9" rx="2.5" fill="#2d2d2d"/>
+  <rect x="20" y="40" width="76" height="2.5" fill="#454545"/>
+  <path d="M35 46 C32 20 50 20 47 46" stroke="#9a9a9a" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+  <path d="M35.5 45 C33 22 49 22 46.5 45" stroke="#d4d4d4" stroke-width="1.2" fill="none"/>
+  <path d="M69 46 C66 20 84 20 81 46" stroke="#9a9a9a" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+  <path d="M69.5 45 C67 22 83 22 80.5 45" stroke="#d4d4d4" stroke-width="1.2" fill="none"/>
+</svg></span>
+        <h2 class="huge" style="font-size:clamp(38px,5.5vw,74px);">Publications</h2>
+        <ul class="dlist serif bold" style="margin-top:18px;font-size:15px;"><li>Сноб — журнал №111, осень 2025</li><li>L’Officiel — журнал №278, лето 2025</li><li>«Мнение Редакции» — журнал №5 осень 2025</li><li>Badlon Magazine — журнал №44 осень 2025</li><li>Sheer Magazine — журнал №1 осень–зима 2025</li><li>Pretty Magazine — журнал №1 лето 2026</li></ul>
+      </div>
+      <div style="display:flex;gap:22px;margin-top:34px;align-items:flex-start;">
+        <div class="polaroid" style="width:160px;transform:rotate(-3deg);"><img src="photos/d3_flatlay.jpg" alt="Съёмка — флэтлей"></div>
+        <div class="polaroid" style="width:175px;transform:rotate(2deg);margin-top:12px;"><img src="photos/d3_hat.jpg" alt="Съёмка — образ"></div>
+        <div class="filmstrip" style="width:200px;margin-top:-6px;transform:rotate(2deg);">
+          <span class="fno" style="top:14px;left:4px;">29</span><span class="fno" style="bottom:14px;left:4px;">30A</span>
+          <span class="fno" style="top:14px;right:4px;writing-mode:vertical-rl;">TX 5063</span>
+          <img src="photos/d3_phobos.jpg" alt="Журнал Pretty — PHOBOS">
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:40px;align-items:flex-end;">
+      <div class="logos">
+  <div class="logorow">
+    <span class="logo tsf">TS<br><b>TELLING STORIES FEST</b></span>
+    <span class="logo lo">L&rsquo;</span>
+  </div>
+  <div class="logorow"><span class="logo flowwow">&#10047; <b>FLOWWOW</b></span></div>
+  <div class="logorow"><span class="logo samokat">&#9679; <b>Самокат</b></span></div>
+</div>
+      <div class="badge" style="width:340px;margin-top:40px;">
+        <h2 class="mid" style="font-size:clamp(30px,4vw,56px);">Show prod</h2>
+        <ul class="dlist serif bold" style="margin-top:14px;font-size:14px;"><li>Британская Высшая школа дизайна × Flowow (2024)</li><li>HSE Fashion Show × Самокат (2025)</li><li>HSE Fashion Show Hard (2025)</li><li>Универмаг «Цветной»</li><li>HSE Telling Stories Fest (Digital Business Hub)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide scatter" id="slide-4">
+  <div class="two" style="gap:46px;align-items:start;">
+    <div>
+      <h2 class="huge" style="font-size:clamp(40px,6vw,82px);margin-bottom:18px;">Hard skills</h2>
+      <div class="spiralcard" style="padding:26px 34px 30px 42px;">
+        <svg class="spiral" viewBox="0 0 46 760" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:100%;"><ellipse cx="23" cy="20.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 8.8 Q-2 20.0 8 32.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="60.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 48.8 Q-2 60.0 8 72.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="100.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 88.8 Q-2 100.0 8 112.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="140.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 128.8 Q-2 140.0 8 152.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="180.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 168.8 Q-2 180.0 8 192.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="220.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 208.8 Q-2 220.0 8 232.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="260.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 248.8 Q-2 260.0 8 272.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="300.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 288.8 Q-2 300.0 8 312.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="340.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 328.8 Q-2 340.0 8 352.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="380.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 368.8 Q-2 380.0 8 392.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="420.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 408.8 Q-2 420.0 8 432.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="460.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 448.8 Q-2 460.0 8 472.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="500.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 488.8 Q-2 500.0 8 512.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="540.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 528.8 Q-2 540.0 8 552.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="580.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 568.8 Q-2 580.0 8 592.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="620.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 608.8 Q-2 620.0 8 632.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="660.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 648.8 Q-2 660.0 8 672.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="700.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 688.8 Q-2 700.0 8 712.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="740.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 728.8 Q-2 740.0 8 752.0" stroke="#b9b9b9" stroke-width="3"/></svg>
+        <div style="margin-bottom:18px;"><div class="script" style="font-size:30px;text-align:center;color:#1c1c1c;">Fashion &amp; Creative</div><ul class="dlist serif" style="margin-top:8px;font-size:14px;"><li>Editorial Styling</li><li>Commercial Styling</li><li>Fashion Styling</li><li>Creative Direction</li><li>Art Direction Support</li><li>Разработка визуальных концепций</li><li>Создание мудбордов и работа с референсами</li><li>Продюсирование fashion-проектов и съёмок</li><li>Организация editorial, campaign и lookbook production</li></ul></div>
+        <div style="margin-bottom:18px;"><div class="script" style="font-size:30px;text-align:center;color:#1c1c1c;">Brand &amp; Production</div><ul class="dlist serif" style="margin-top:8px;font-size:14px;"><li>Коммуникация с брендами и партнёрами</li><li>Организация barter-сотрудничества</li><li>Координация съёмочных команд</li><li>Работа с моделями, фотографами, визажистами и продюсерами</li><li>Полный цикл подготовки fashion-съёмок</li><li>Управление логистикой одежды и реквизита</li></ul></div>
+        <div style="margin-bottom:18px;"><div class="script" style="font-size:30px;text-align:center;color:#1c1c1c;">Digital Tools</div><ul class="dlist serif" style="margin-top:8px;font-size:14px;"><li>Figma</li><li>Google Workspace</li><li>Microsoft Office</li><li>WaveSpeedAI</li><li>Midjourney</li><li>Ideogram</li></ul></div>
+      </div>
+    </div>
+    <div>
+      <div class="torn t2" style="padding:40px 46px;">
+        <ul class="dlist" style="font-size:15px;"><li>Креативное мышление</li><li>Визуальная насмотренность</li><li>Лидерство</li><li>Коммуникабельность</li><li>Эмоциональный интеллект</li><li>Гибкость мышления</li><li>Организованность</li><li>Работа в режиме многозадачности</li><li>Стрессоустойчивость</li><li>Умение быстро принимать решения</li></ul>
+        <h2 class="huge" style="font-size:clamp(36px,5vw,68px);margin-top:18px;">Soft skills</h2>
+      </div>
+      <div style="display:flex;gap:30px;align-items:flex-start;margin-top:40px;flex-wrap:wrap;">
+        <div class="polaroid" style="width:200px;transform:rotate(-2deg);position:relative;">
+          <span class="tape" style="top:-14px;left:-18px;transform:rotate(-40deg);"></span>
+          <span class="tape" style="bottom:-12px;right:-16px;transform:rotate(-36deg);"></span>
+          <img src="photos/d4_studio.jpg" alt="Студийная съёмка">
+        </div>
+        <div class="hangtag" style="width:210px;transform:rotate(2deg);">
+          <svg width="100%" height="100%" viewBox="0 0 220 70" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;z-index:0;">
+  <path d="M10 18 C70 8,150 14,210 12" stroke="rgba(229,37,29,.55)" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M14 56 C74 48,150 52,206 50" stroke="rgba(229,37,29,.5)" stroke-width="11" fill="none" stroke-linecap="round"/>
+</svg>
+          <p style="position:relative;z-index:1;line-height:1.6;font-size:14px;"><b>Английский язык</b> — C1, <span class="serif">IELTS 7.0.</span><br><b>Немецкий</b> — <span class="serif">B1 Goethe-Test</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide" id="slide-5"><h2 class="huge">Publications</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.624;aspect-ratio:0.624;"><img src="photos/s5_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.770;aspect-ratio:0.770;"><img src="photos/s5_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.862;aspect-ratio:0.862;"><img src="photos/s5_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.661;aspect-ratio:0.661;"><img src="photos/s5_p3.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.787;aspect-ratio:0.787;"><img src="photos/s5_p4.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Ассистирование для «Мнение Редакции» с Анджелиной Смерфит, «Сноба» с Иваном Янковским, L’Officiel × Неделя Вьетнама в Москве; продюсирование и стилизация для журналов «SHEER» и «Pretty»</div></div></section>
+<section class="slide" id="slide-6"><h2 class="huge">Editorial styling</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:1.333;aspect-ratio:1.333;"><img src="photos/s6_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.319;aspect-ratio:1.319;"><img src="photos/s6_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.332;aspect-ratio:1.332;"><img src="photos/s6_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.373;aspect-ratio:1.373;"><img src="photos/s6_p3.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.756;aspect-ratio:0.756;"><img src="photos/s6_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.752;aspect-ratio:0.752;"><img src="photos/s6_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.781;aspect-ratio:0.781;"><img src="photos/s6_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.386;aspect-ratio:1.386;"><img src="photos/s6_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.375;aspect-ratio:1.375;"><img src="photos/s6_p8.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Ассистирование L’Officiel × Неделя Вьетнама в Москве<br><span class='serif'>L’Officiel журнал №278, лето 2025</span></div></div></section>
+<section class="slide" id="slide-7"><h2 class="huge">Editorial styling</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.757;aspect-ratio:0.757;"><img src="photos/s7_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.763;aspect-ratio:0.763;"><img src="photos/s7_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.770;aspect-ratio:0.770;"><img src="photos/s7_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.751;aspect-ratio:0.751;"><img src="photos/s7_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.340;aspect-ratio:1.340;"><img src="photos/s7_p4.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.746;aspect-ratio:0.746;"><img src="photos/s7_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.740;aspect-ratio:0.740;"><img src="photos/s7_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.757;aspect-ratio:0.757;"><img src="photos/s7_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.705;aspect-ratio:0.705;"><img src="photos/s7_p8.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.728;aspect-ratio:0.728;"><img src="photos/s7_p9.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Ассистирование для «Мнение Редакции» с Анджелиной Смерфит<br><span class='serif'>«Мнение Редакции» — журнал №5 осень 2025</span></div><div class="cap right"><div class='linklist'><a class="lnk" href="https://www.instagram.com/reel/DPwQDzCCN1K/?igsh=MWRrYThnNGdzYjFwbg==" target="_blank" rel="noopener">Видео&nbsp;съёмка</a><a class="lnk" href="https://www.instagram.com/reel/DPqVZM-iJus/?igsh=cDVwa2g1M24wdWZ3" target="_blank" rel="noopener">Бэкстейдж</a></div></div></div></section>
+<section class="slide" id="slide-8"><h2 class="huge">Editorial styling</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.818;aspect-ratio:0.818;"><img src="photos/s8_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.799;aspect-ratio:0.799;"><img src="photos/s8_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.828;aspect-ratio:0.828;"><img src="photos/s8_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.829;aspect-ratio:0.829;"><img src="photos/s8_p3.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.803;aspect-ratio:0.803;"><img src="photos/s8_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.788;aspect-ratio:0.788;"><img src="photos/s8_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.806;aspect-ratio:0.806;"><img src="photos/s8_p6.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Ассистирование для «Сноба» с Иваном Янковским<br><span class='serif'>Сноб — журнал №111, осень 2025</span></div><div class="cap right"><a class="lnk" href="https://www.instagram.com/reel/DN8Cr_pij6Z/?igsh=MWRwd3BxMTAzbzQxMA==" target="_blank" rel="noopener">Ссылка на бэкстейдж</a></div></div></section>
+<section class="slide" id="slide-9"><h2 class="huge">Prod &amp; Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.807;aspect-ratio:0.807;"><img src="photos/s9_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.794;aspect-ratio:0.794;"><img src="photos/s9_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.505;aspect-ratio:1.505;"><img src="photos/s9_p2.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.801;aspect-ratio:0.801;"><img src="photos/s9_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.799;aspect-ratio:0.799;"><img src="photos/s9_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.796;aspect-ratio:0.796;"><img src="photos/s9_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.794;aspect-ratio:0.794;"><img src="photos/s9_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.783;aspect-ratio:0.783;"><img src="photos/s9_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.814;aspect-ratio:0.814;"><img src="photos/s9_p8.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.807;aspect-ratio:0.807;"><img src="photos/s9_p9.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.629;aspect-ratio:1.629;"><img src="photos/s9_p10.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.805;aspect-ratio:0.805;"><img src="photos/s9_p11.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.636;aspect-ratio:1.636;"><img src="photos/s9_p12.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.440;aspect-ratio:1.440;"><img src="photos/s9_p13.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Продюсирование и стилизация съёмок портфолио для моделей агентства <span class='serif'>Ultra Models</span></div><div class="cap right">Координация всего съёмочного процесса, поиска и коммуникации с фотографами, визажистами и моделями</div></div></section>
+<section class="slide" id="slide-10"><h2 class="huge">Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.754;aspect-ratio:0.754;"><img src="photos/s10_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.749;aspect-ratio:0.749;"><img src="photos/s10_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.748;aspect-ratio:0.748;"><img src="photos/s10_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.751;aspect-ratio:0.751;"><img src="photos/s10_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.740;aspect-ratio:0.740;"><img src="photos/s10_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.763;aspect-ratio:0.763;"><img src="photos/s10_p5.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:0.789;aspect-ratio:0.789;"><img src="photos/s10_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.795;aspect-ratio:0.795;"><img src="photos/s10_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.797;aspect-ratio:0.797;"><img src="photos/s10_p8.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Продюсирование и стилизация съёмки лукбука для дизайнеров Высшей Школы Дизайна</div></div></section>
+<section class="slide" id="slide-11"><h2 class="huge">Prod &amp; Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.670;aspect-ratio:0.670;"><img src="photos/s11_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.676;aspect-ratio:0.676;"><img src="photos/s11_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.674;aspect-ratio:0.674;"><img src="photos/s11_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.681;aspect-ratio:0.681;"><img src="photos/s11_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.673;aspect-ratio:0.673;"><img src="photos/s11_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.675;aspect-ratio:0.675;"><img src="photos/s11_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.648;aspect-ratio:0.648;"><img src="photos/s11_p6.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:1.483;aspect-ratio:1.483;"><img src="photos/s11_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.489;aspect-ratio:1.489;"><img src="photos/s11_p8.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.481;aspect-ratio:1.481;"><img src="photos/s11_p9.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.474;aspect-ratio:1.474;"><img src="photos/s11_p10.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.476;aspect-ratio:1.476;"><img src="photos/s11_p11.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Продюсирование и стилизация съёмки коллекции выпускницы Британской Высшей Школы Дизайна — Авроры Луниной</div><div class="cap right serif">Команда из 12 человек, 3 модели, локация предоставлена на основе сотрудничества с Marco Polo Hotel Moscow</div></div></section>
+<section class="slide" id="slide-12"><h2 class="huge">Prod &amp; Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.551;aspect-ratio:0.551;"><img src="photos/s12_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.668;aspect-ratio:0.668;"><img src="photos/s12_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.672;aspect-ratio:0.672;"><img src="photos/s12_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.670;aspect-ratio:0.670;"><img src="photos/s12_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.671;aspect-ratio:0.671;"><img src="photos/s12_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.664;aspect-ratio:0.664;"><img src="photos/s12_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.672;aspect-ratio:0.672;"><img src="photos/s12_p6.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Продюсирование и стилизация съёмки с макро-инфлюенсером Лизой Анохиной <span class='serif'>(TikTok: 40.5M, Inst: 4.5M подписчиков)</span></div></div></section>
+<section class="slide" id="slide-13"><h2 class="huge">Prod &amp; Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.700;aspect-ratio:0.700;"><img src="photos/s13_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.818;aspect-ratio:1.818;"><img src="photos/s13_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.428;aspect-ratio:1.428;"><img src="photos/s13_p2.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:1.385;aspect-ratio:1.385;"><img src="photos/s13_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.809;aspect-ratio:0.809;"><img src="photos/s13_p4.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Продюсирование и стилизация серии съёмок для собственного печатного издания журнала «SHEER»</div><div class="cap right">Дизайн, вёрстка и написание текстов для печатного издания журнала «SHEER»<br><a class="lnk" href="https://www.calameo.com/read/0080716495de0a781ec6c?utm_source=portfolio.hse.ru&utm_medium=referral&utm_content=%2F" target="_blank" rel="noopener">Ссылка на диджитал версию журнала</a></div></div></section>
+<section class="slide" id="slide-14"><h2 class="huge">Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.798;aspect-ratio:0.798;"><img src="photos/s14_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.802;aspect-ratio:0.802;"><img src="photos/s14_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.801;aspect-ratio:0.801;"><img src="photos/s14_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.791;aspect-ratio:0.791;"><img src="photos/s14_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.776;aspect-ratio:0.776;"><img src="photos/s14_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.798;aspect-ratio:0.798;"><img src="photos/s14_p5.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:1.589;aspect-ratio:1.589;"><img src="photos/s14_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.492;aspect-ratio:1.492;"><img src="photos/s14_p7.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Стилизация творческой съёмки и видеоклипа для Angels Project</div><div class="cap right">Ссылка на видео <a class="lnk" href="https://www.instagram.com/reel/DZayThsIV0I/?igsh=MWpzOTRkcHZ5djBieA==" target="_blank" rel="noopener">клип</a></div></div></section>
+<section class="slide" id="slide-15"><h2 class="huge">Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.983;aspect-ratio:0.983;"><img src="photos/s15_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.431;aspect-ratio:1.431;"><img src="photos/s15_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.559;aspect-ratio:1.559;"><img src="photos/s15_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.542;aspect-ratio:1.542;"><img src="photos/s15_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.502;aspect-ratio:1.502;"><img src="photos/s15_p4.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:1.004;aspect-ratio:1.004;"><img src="photos/s15_p5.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.410;aspect-ratio:1.410;"><img src="photos/s15_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.521;aspect-ratio:1.521;"><img src="photos/s15_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.496;aspect-ratio:1.496;"><img src="photos/s15_p8.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.487;aspect-ratio:1.487;"><img src="photos/s15_p9.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Стилизация музыкального клипа для «Ozerniki»<br>Стилизация второго музыкального клипа для «Ozerniki» совместно с Feduk</div><div class="cap right"><div class='linklist'><a class="lnk" href="https://www.youtube.com/watch?v=GtjnB0xL9ME&list=RDGtjnB0xL9ME&start_radio=1&pp=ygUHZmlyc3QgbKAHAQ%3D%3D" target="_blank" rel="noopener">Клип Parfumeur, the&nbsp;pak, Тейстлув — FIRST&nbsp;L</a><a class="lnk" href="https://www.youtube.com/watch?v=CM6H5oGOgnY&list=RDCM6H5oGOgnY&start_radio=1" target="_blank" rel="noopener">Клип Parfumeur, FEDUK, the&nbsp;pak, Тейстлув — FIRST&nbsp;L (REMIX)</a></div></div></div></section>
+<section class="slide" id="slide-16"><h2 class="huge">Prod &amp; Style</h2><div class="gallery"><div class="grow"><div class="cell" style="flex-grow:0.568;aspect-ratio:0.568;"><img src="photos/s16_p0.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.758;aspect-ratio:0.758;"><img src="photos/s16_p1.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.574;aspect-ratio:0.574;"><img src="photos/s16_p2.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.578;aspect-ratio:0.578;"><img src="photos/s16_p3.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.757;aspect-ratio:0.757;"><img src="photos/s16_p4.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:0.754;aspect-ratio:0.754;"><img src="photos/s16_p5.jpg" alt="Работа" loading="lazy"></div></div><div class="grow"><div class="cell" style="flex-grow:1.486;aspect-ratio:1.486;"><img src="photos/s16_p6.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.495;aspect-ratio:1.495;"><img src="photos/s16_p7.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.505;aspect-ratio:1.505;"><img src="photos/s16_p8.jpg" alt="Работа" loading="lazy"></div><div class="cell" style="flex-grow:1.500;aspect-ratio:1.500;"><img src="photos/s16_p9.jpg" alt="Работа" loading="lazy"></div></div></div><div class="caps"><div class="cap ">Продюсирование показа HSE Fashion Design × Самокат &nbsp;·&nbsp; Продюсирование показа Британской Высшей Школы Дизайна × Flowow</div></div></section>
+<section class="slide scatter" id="slide-17">
+  <div style="display:flex;justify-content:center;">
+    <div class="torn t1" style="max-width:680px;padding:48px 56px;position:relative;">
+      <span class="binder" style="top:-50px;left:50%;transform:translateX(-50%);"><svg width="116" height="92" viewBox="0 0 116 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M30 86 L86 86 L96 46 L20 46 Z" fill="#1b1b1b"/>
+  <rect x="20" y="40" width="76" height="9" rx="2.5" fill="#2d2d2d"/>
+  <rect x="20" y="40" width="76" height="2.5" fill="#454545"/>
+  <path d="M35 46 C32 20 50 20 47 46" stroke="#9a9a9a" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+  <path d="M35.5 45 C33 22 49 22 46.5 45" stroke="#d4d4d4" stroke-width="1.2" fill="none"/>
+  <path d="M69 46 C66 20 84 20 81 46" stroke="#9a9a9a" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+  <path d="M69.5 45 C67 22 83 22 80.5 45" stroke="#d4d4d4" stroke-width="1.2" fill="none"/>
+</svg></span>
+      <div class="script" style="font-size:clamp(40px,5vw,60px);text-align:center;color:#1c1c1c;">Professional goal :</div>
+      <p style="text-align:center;line-height:1.6;margin-top:14px;font-size:15px;color:#222;">Развиваться как <span class="serif">Editorial Stylist</span> и <span class="serif">Art Director</span>, создавая визуальные концепции для глянцевых медиа, рекламных кампаний и <span class="serif">fashion</span>-брендов. Стремлюсь работать на стыке стилизации, креативного продюсирования и художественного руководства, формируя сильные визуальные истории и узнаваемую эстетику проектов.</p>
+    </div>
+  </div>
+  <div style="position:relative;margin-top:54px;display:flex;justify-content:center;">
+    <span class="doodle" style="position:absolute;left:8%;top:-10px;"><svg class="doodle" width="120" height="180" viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 30 C50 18,86 26,96 20" stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M18 52 C48 40,86 50,98 44 C70 56,40 56,22 64 C56 58,86 62,96 58" stroke="#E5251D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 78 L70 150 M70 150 L60 142 M70 150 L80 144" stroke="#111" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span>
+    <div class="contact">
+  <p>Стилист, креативный продюсер,<br>ассистент креативного директора</p>
+  <p style="margin-top:14px;"><span class="k">Контакты:</span></p>
+  <p>Телефон: +7 916 838-06-76</p>
+  <p>Email: <a href="mailto:BogomolovaAnna.sty@yandex.ru">BogomolovaAnna.sty@yandex.ru</a></p>
+  <p>Instagram / Telegram : <a href="https://instagram.com/anyabogg" target="_blank" rel="noopener">@anyabogg</a></p>
+  <p><span class="k">Город:</span> Москва</p>
+  <p><span class="k">Дата рождения:</span> 26.11.2004</p>
+</div>
+    <span class="doodle" style="position:absolute;right:6%;bottom:-20px;"><svg class="doodle" width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 70 C60 30,110 100,150 50 M30 90 C70 50,120 110,160 64 M40 108 C78 70,124 120,164 84"
+    stroke="#111" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M60 116 C96 96,140 120,176 110 M70 132 C104 116,146 132,182 126"
+    stroke="#E5251D" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M150 40 L172 92" stroke="#111" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg></span>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h3>Контакты</h3>
+      <p>Телефон: <a href="tel:+79168380676">+7 916 838-06-76</a></p>
+      <p>Email: <a href="mailto:BogomolovaAnna.sty@yandex.ru">BogomolovaAnna.sty@yandex.ru</a></p>
+    </div>
+    <div class="footer-col">
+      <h3>Соцсети</h3>
+      <p><a href="https://instagram.com/anyabogg" target="_blank" rel="noopener">Instagram: @anyabogg</a></p>
+      <p><a href="https://t.me/anyabogg" target="_blank" rel="noopener">Telegram: @anyabogg</a></p>
+    </div>
+    <div class="footer-col">
+      <h3>О себе</h3>
+      <p>Стилист, креативный продюсер,<br>ассистент креативного директора</p>
+      <p>Москва</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Анна Богомолова. Все права защищены.</p>
+    <p>Portfolio</p>
+  </div>
+</footer>
+<button class="scroll-top" id="scrollTop" aria-label="Наверх">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<script>
+(function(){
+  const nav=document.getElementById('nav'),progressBar=document.getElementById('progressBar'),
+        scrollTopBtn=document.getElementById('scrollTop'),slides=document.querySelectorAll('.slide'),
+        dots=document.querySelectorAll('.page-dot'),navLinksEl=document.getElementById('navLinks'),
+        hamburger=document.getElementById('hamburger');
+  let lastScroll=0,ticking=false;
+  function onScroll(){
+    const s=window.scrollY,docH=document.documentElement.scrollHeight-window.innerHeight;
+    progressBar.style.width=(s/docH*100)+'%';
+    if(s>200){nav.classList.add('scrolled');(s>lastScroll&&s>300)?nav.classList.add('hidden'):nav.classList.remove('hidden');}
+    else{nav.classList.remove('scrolled');nav.classList.remove('hidden');}
+    lastScroll=s;
+    scrollTopBtn.classList.toggle('visible',s>600);
+    slides.forEach(sl=>{if(sl.getBoundingClientRect().top<window.innerHeight*0.85)sl.classList.add('visible');});
+    let active=0;
+    slides.forEach((sl,i)=>{if(sl.getBoundingClientRect().top<window.innerHeight*0.5)active=i;});
+    dots.forEach((d,i)=>d.classList.toggle('active',i===active));
+  }
+  window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{onScroll();ticking=false;});ticking=true;}});
+  dots.forEach(d=>d.addEventListener('click',()=>document.getElementById('slide-'+d.getAttribute('data-slide')).scrollIntoView({behavior:'smooth'})));
+  scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  hamburger.addEventListener('click',()=>navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinksEl.classList.remove('open')));
+  onScroll(); if(slides[0])slides[0].classList.add('visible');
+})();
+</script>
+</body>
+</html>
