@@ -69,11 +69,11 @@ nav.scrolled{box-shadow:var(--shadow);}
 .torn.t2{--tornclip:polygon(3% 2%,20% 6%,40% 1%,60% 5%,80% 1%,96% 5%,99% 24%,97% 48%,100% 70%,96% 92%,98% 99%,78% 95%,58% 100%,38% 96%,18% 100%,4% 96%,2% 76%,5% 52%,1% 30%,4% 14%);}
 
 /* ---------- Spiral binding ---------- */
-.spiralcard{position:relative;background:#fff;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.12);border:1px solid #ececec;}
+.spiralcard{position:relative;background:#fff;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.12);border:1px solid #ececec;overflow:visible;}
 .spiral{position:absolute;left:-26px;top:18px;bottom:18px;width:46px;z-index:6;}
 
 /* ---------- Notebook tabs ---------- */
-.tab{position:absolute;right:0;display:flex;align-items:center;justify-content:center;width:42px;background:#efeeea;border:1px solid #dcdbd5;border-right:none;border-radius:7px 0 0 7px;box-shadow:-2px 2px 5px rgba(0,0,0,.05);}
+.tab{position:absolute;right:-42px;display:flex;align-items:center;justify-content:center;width:42px;background:#efeeea;border:1px solid #dcdbd5;border-right:none;border-radius:7px 0 0 7px;box-shadow:-2px 2px 5px rgba(0,0,0,.05);}
 .tab span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:13px;letter-spacing:.04em;color:#555;font-family:var(--serif);padding:6px 0;}
 
 /* ---------- Note card on paperclip ---------- */
@@ -279,44 +279,75 @@ footer{background:var(--text);color:#fff;padding:48px 24px 32px;}
     </div>
   </div>
 </section>
-<section class="slide" id="slide-2">
-  <div class="two" style="gap:40px;">
-    <div class="spiralcard" style="padding:28px 34px 34px 40px;">
-      <svg class="spiral" viewBox="0 0 46 680" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:100%;"><ellipse cx="23" cy="20.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 8.8 Q-2 20.0 8 32.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="60.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 48.8 Q-2 60.0 8 72.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="100.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 88.8 Q-2 100.0 8 112.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="140.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 128.8 Q-2 140.0 8 152.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="180.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 168.8 Q-2 180.0 8 192.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="220.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 208.8 Q-2 220.0 8 232.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="260.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 248.8 Q-2 260.0 8 272.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="300.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 288.8 Q-2 300.0 8 312.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="340.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 328.8 Q-2 340.0 8 352.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="380.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 368.8 Q-2 380.0 8 392.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="420.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 408.8 Q-2 420.0 8 432.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="460.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 448.8 Q-2 460.0 8 472.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="500.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 488.8 Q-2 500.0 8 512.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="540.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 528.8 Q-2 540.0 8 552.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="580.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 568.8 Q-2 580.0 8 592.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="620.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 608.8 Q-2 620.0 8 632.0" stroke="#b9b9b9" stroke-width="3"/><ellipse cx="23" cy="660.0" rx="20" ry="11.2" stroke="#8a8a8a" stroke-width="3"/><path d="M3 648.8 Q-2 660.0 8 672.0" stroke="#b9b9b9" stroke-width="3"/></svg>
-      <h2 class="mid" style="margin-bottom:18px;">Experience</h2>
-      <div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2024 — now</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;">Национальный исследовательский университет <b>«Высшая школа экономики»</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: брендинг в индустрии моды</div></div><div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2022 – 2024</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;"><b>Британская высшая школа дизайна</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: дизайн одежды</div></div><div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2021 – 2022</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;"><b>Британская высшая школа дизайна</b><br>Foundation Art &amp; Design<br>Специализация: современное искусство</div></div><div style="margin-bottom:22px;"><div class="script" style="font-size:34px;line-height:1;color:#1c1c1c;">2013 – 2021</div><div style="font-size:14px;line-height:1.5;color:#333;margin-top:4px;"><b>Архитектурная школа СТАРТ при МАрхИ</b><br>Курсы: дизайн одежды, профессиональный архитектурный класс</div></div>
-      <div class="tab" style="top:8px;height:96px;"><span>A &amp; P</span></div><div class="tab" style="top:114px;height:150px;"><span>Assessment</span></div><div class="tab" style="top:274px;height:150px;"><span>Calculations</span></div><div class="tab" style="top:434px;height:96px;"><span>Coding</span></div><div class="tab" style="top:540px;height:96px;"><span>Equipment</span></div><div class="tab" style="top:646px;height:150px;"><span>Injections</span></div>
-    </div>
-    <div class="stack">
-      <div class="notecard" style="margin-top:6px;">
-        <span class="clip-paper" style="top:-30px;right:40px;transform:rotate(8deg);"><svg viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
-  <path d="M14 14 C14 6,28 6,28 14 L28 70 C28 84,8 84,8 70 L8 26 C8 16,22 16,22 26 L22 64"
-    stroke="#a9a9a9" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M16 14 C16 8,26 8,26 14 L26 70 C26 82,10 82,10 70 L10 26 C10 18,20 18,20 26 L20 64"
-    stroke="#d6d6d6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-</svg></span>
-        <div class="cardtitle">Editorial. Fashion magazines</div>
-        <ul class="dlist serif bold"><li>«Мнение Редакции» с Анджелиной Смерфит</li><li>«Сноб» с Иваном Янковским</li><li>L’Officiel × Неделя Вьетнама в Москве</li><li>Open Call Badlon Magazine</li></ul>
-      </div>
-      <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
-        <div class="polaroid" style="width:170px;transform:rotate(-3deg);flex:none;">
-          <img src="photos/d2_snob.jpg" alt="Сноб — съёмка">
+<section class="slide" id="slide-2" style="padding:64px 40px;">
+  <div style="display:grid;grid-template-columns:46fr 54fr;gap:48px;align-items:start;">
+
+    <!-- LEFT: real notebook, text overlaid -->
+    <div style="position:relative;">
+      <img src="photos/bg_notebook.jpg" alt="" style="width:100%;display:block;">
+      <div style="position:absolute;inset:0;padding:4% 10% 6% 16%;overflow:hidden;">
+        <h2 style="font-weight:900;font-size:clamp(22px,3vw,42px);letter-spacing:-.02em;text-transform:uppercase;margin-bottom:4%;line-height:1;">Experience</h2>
+        <div style="margin-bottom:4%;">
+          <div style="font-family:var(--script);font-size:clamp(14px,1.8vw,26px);line-height:1;color:#1c1c1c;">2024 — now</div>
+          <div style="font-size:clamp(9px,0.9vw,12px);line-height:1.45;color:#333;margin-top:2%;">Национальный исследовательский университет <b>«Высшая школа экономики»</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: брендинг в индустрии моды</div>
         </div>
-        <div class="notecard" style="flex:1;min-width:240px;">
-          <span class="clip-paper" style="top:-30px;right:30px;transform:rotate(-6deg);"><svg viewBox="0 0 40 92" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
-  <path d="M14 14 C14 6,28 6,28 14 L28 70 C28 84,8 84,8 70 L8 26 C8 16,22 16,22 26 L22 64"
-    stroke="#a9a9a9" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M16 14 C16 8,26 8,26 14 L26 70 C26 82,10 82,10 70 L10 26 C10 18,20 18,20 26 L20 64"
-    stroke="#d6d6d6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-</svg></span>
-          <div class="cardtitle">Lookbook Production</div>
-          <ul class="dlist serif bold"><li>Ostin Kids</li><li>Kapsula</li><li>Parit</li><li>Botrois</li></ul>
-          <div class="cardtitle" style="margin-top:16px;">TV shows Production</div>
-          <ul class="dlist serif bold"><li>Финал реалити-шоу «Королева ринга»</li><li>Рекламная кампания Озон Банка с Гошей Куценко</li><li>Шоу «Страсти по Фишеру» со Славой КПСС, Яном Топлесом и Азаматом Мусагалиевым</li><li>Музыкальный клип Ozerniki</li><li>Музыкальный клип Ozerniki × Feduk</li></ul>
+        <div style="margin-bottom:4%;">
+          <div style="font-family:var(--script);font-size:clamp(14px,1.8vw,26px);line-height:1;color:#1c1c1c;">2022 – 2024</div>
+          <div style="font-size:clamp(9px,0.9vw,12px);line-height:1.45;color:#333;margin-top:2%;"><b>Британская высшая школа дизайна</b><br>Факультет креативных индустрий, программа «Мода»<br>Специализация: дизайн одежды</div>
+        </div>
+        <div style="margin-bottom:4%;">
+          <div style="font-family:var(--script);font-size:clamp(14px,1.8vw,26px);line-height:1;color:#1c1c1c;">2021 – 2022</div>
+          <div style="font-size:clamp(9px,0.9vw,12px);line-height:1.45;color:#333;margin-top:2%;"><b>Британская высшая школа дизайна</b><br>Foundation Art &amp; Design<br>Специализация: современное искусство</div>
+        </div>
+        <div>
+          <div style="font-family:var(--script);font-size:clamp(14px,1.8vw,26px);line-height:1;color:#1c1c1c;">2013 – 2021</div>
+          <div style="font-size:clamp(9px,0.9vw,12px);line-height:1.45;color:#333;margin-top:2%;"><b>Архитектурная школа СТАРТ при МАрхИ</b><br>Курсы: дизайн одежды, профессиональный архитектурный класс</div>
         </div>
       </div>
-      <h2 class="mid" style="text-align:right;margin-top:10px;">Work cases</h2>
     </div>
+
+    <!-- RIGHT -->
+    <div style="display:flex;flex-direction:column;gap:22px;">
+
+      <!-- White card: Editorial — use top half of image via background-position -->
+      <div style="position:relative;background:url(photos/bg_card_white.jpg) center top/100% auto no-repeat;padding-top:42%;border-radius:4px;">
+        <div style="position:absolute;inset:0;padding:8% 10% 6% 10%;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:var(--script);font-size:clamp(14px,1.6vw,22px);color:#1c1c1c;margin-bottom:6px;">Editorial. Fashion magazines</div>
+          <ul style="list-style:none;padding:0;margin:0;font-size:clamp(10px,1vw,13px);line-height:1.7;color:#222;">
+            <li>· «Мнение Редакции» с Анджелиной Смерфит</li>
+            <li>· «Сноб» с Иваном Янковским</li>
+            <li>· L'Officiel × Неделя Вьетнама в Москве</li>
+            <li>· Open Call Badlon Magazine</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Polaroid + beige card -->
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div class="polaroid" style="width:36%;flex-shrink:0;transform:rotate(-3deg);">
+          <img src="photos/d2_snob.jpg" alt="Сноб">
+        </div>
+        <div style="flex:1;position:relative;background:url(photos/bg_card_beige.jpg) center top/100% auto no-repeat;padding-top:56%;border-radius:4px;">
+          <div style="position:absolute;inset:0;padding:8% 8% 6% 8%;">
+            <div style="font-family:var(--script);font-size:clamp(12px,1.3vw,18px);color:#1c1c1c;margin-bottom:4px;">Lookbook Production</div>
+            <ul style="list-style:none;padding:0;margin:0 0 8px;font-size:clamp(8px,0.85vw,11px);line-height:1.55;color:#222;">
+              <li>· Ostin Kids</li><li>· Kapsula</li><li>· Parit</li><li>· Botrois</li>
+            </ul>
+            <div style="font-family:var(--script);font-size:clamp(12px,1.3vw,18px);color:#1c1c1c;margin-bottom:4px;">TV shows Production</div>
+            <ul style="list-style:none;padding:0;margin:0;font-size:clamp(8px,0.85vw,11px);line-height:1.55;color:#222;">
+              <li>· Финал реалити-шоу «Королева ринга»</li>
+              <li>· Рекламная кампания Озон Банка с Гошей Куценко</li>
+              <li>· Шоу «Страсти по Фишеру» со Славой КПСС, Яном Топлесом и Азаматом Мусагалиевым</li>
+              <li>· Музыкальный клип Ozerniki</li>
+              <li>· Музыкальный клип Ozerniki × Feduk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-weight:900;font-size:clamp(28px,4vw,54px);letter-spacing:-.02em;text-transform:uppercase;text-align:right;">Work cases</h2>
+    </div>
+
   </div>
 </section>
 <section class="slide scatter" id="slide-3">
