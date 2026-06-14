@@ -1,0 +1,42 @@
+/* ============================================================
+   SPACING & LAYOUT — Bogomolova Design System
+   A 4px base rhythm. Editorial layouts are generous and
+   asymmetric; the scrapbook overlaps elements with negative
+   margins, so spacing tokens double as overlap offsets.
+   ============================================================ */
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --space-0:   0;
+  --space-1:   0.25rem;   /* 4 */
+  --space-2:   0.5rem;    /* 8 */
+  --space-3:   0.75rem;   /* 12 */
+  --space-4:   1rem;      /* 16 */
+  --space-5:   1.5rem;    /* 24 */
+  --space-6:   2rem;      /* 32 */
+  --space-7:   3rem;      /* 48 */
+  --space-8:   4rem;      /* 64 */
+  --space-9:   6rem;      /* 96 */
+  --space-10:  8rem;      /* 128 */
+
+  /* ---- Page frame ---- */
+  --page-max:     1280px;
+  --page-gutter:  clamp(1.25rem, 5vw, 5rem); /* @kind spacing */
+  --section-gap:  var(--space-9);
+
+  /* ---- Radii — editorial = mostly sharp ---- */
+  --radius-none:   0;
+  --radius-photo:  2px;    /* barely-there on polaroids */
+  --radius-chip:   999px;  /* tags / pills */
+  --radius-badge:  4px;
+
+  /* ---- Hairline / border weights ---- */
+  --stroke-hair:   1px;
+  --stroke-rule:   1.5px;
+  --stroke-bold:   2.5px;   /* heavy editorial frame */
+
+  /* ---- Scrapbook rotations (apply via transform) ---- */
+  --rot-xs:  -1.2deg;  /* @kind other */
+  --rot-sm:   2deg;    /* @kind other */
+  --rot-md:  -3.5deg;  /* @kind other */
+  --rot-lg:   5deg;    /* @kind other */
+}

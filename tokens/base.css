@@ -1,0 +1,99 @@
+/* ============================================================
+   BASE — element defaults built on the tokens.
+   Imported last by styles.css so consumers get sensible
+   document typography out of the box.
+   ============================================================ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-relaxed);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display headings — Montserrat, heavy, uppercase */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extrabold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-4);
+}
+h1 { font-size: var(--text-display); }
+h2 { font-size: var(--text-headline); }
+h3 { font-size: var(--text-title); }
+
+/* Calligraphic subhead — Pinyon Script copperplate */
+.script {
+  font-family: var(--font-script);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: var(--ls-normal);
+  line-height: 1.1;
+}
+
+/* Editorial serif (lists, credits) */
+.serif {
+  font-family: var(--font-serif);
+  font-weight: var(--fw-regular);
+}
+.serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  text-transform: none;
+}
+
+p { margin: 0 0 var(--space-4); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { display: block; max-width: 100%; }
+
+/* Spaced micro-label (tracked-out caps) */
+.label-micro {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-micro);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Marker signature */
+.marker {
+  font-family: var(--font-marker);
+  font-weight: var(--fw-bold);
+  color: var(--ink);
+  line-height: 0.9;
+}
+
+/* Handwritten annotation */
+.annotation {
+  font-family: var(--font-marker);
+  font-weight: var(--fw-semibold);
+  color: var(--accent);
+  line-height: 1;
+}
+
+::selection {
+  background: var(--marker-red);
+  color: var(--paper);
+}

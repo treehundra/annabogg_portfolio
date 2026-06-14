@@ -1,0 +1,103 @@
+<!-- @dsCard group="Components" viewport="700x720" name="Decor — paper objects" subtitle="Tape, polaroids, clips, marker, torn paper, spiral, hang-tags" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../../styles.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  body { margin: 0; background: var(--paper); padding: 28px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px 22px; align-items: start; }
+  .cell { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; min-height: 150px; justify-content: flex-start; }
+  .cell .body { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 120px; }
+  .lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-300); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { TapeStrip, Polaroid, BulldogClip, MarkerStroke, TornPaper, SpiralBinding, StringBadge, ScrapCard } = window.BogomolovaDesignSystem_6cd50c;
+
+  function Cell({ name, children }) {
+    return (
+      <div className="cell">
+        <span className="lbl">{name}</span>
+        <div className="body">{children}</div>
+      </div>
+    );
+  }
+
+  function Demo() {
+    return (
+      <div className="grid">
+        <Cell name="TapeStrip">
+          <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
+            <TapeStrip variant="warm" rotate={-6} />
+            <TapeStrip variant="cool" width={108} rotate={3}>2024</TapeStrip>
+          </div>
+        </Cell>
+        <Cell name="Polaroid">
+          <Polaroid caption="Sheer / SS25" width={130} rotate={-3} />
+        </Cell>
+        <Cell name="BulldogClip">
+          <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start' }}>
+            <BulldogClip tone="black" />
+            <BulldogClip tone="steel" rotate={8} />
+          </div>
+        </Cell>
+        <Cell name="MarkerStroke">
+          <div style={{ display: 'grid', gap: 16, width: '100%' }}>
+            <div style={{ position: 'relative', fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: 22 }}>
+              Портфолио
+              <MarkerStroke variant="underline" style={{ position: 'absolute', left: 0, right: 0, bottom: -8 }} />
+            </div>
+            <div style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
+              <MarkerStroke variant="circle" width={64} />
+              <MarkerStroke variant="check" width={34} />
+              <span style={{ position: 'relative', fontFamily: 'var(--font-body)' }}>
+                выделено
+                <MarkerStroke variant="highlight" style={{ position: 'absolute', inset: '-30% -8%', zIndex: -1 }} />
+              </span>
+            </div>
+          </div>
+        </Cell>
+        <Cell name="TornPaper">
+          <TornPaper edges="both" tone="aged" rotate={-1.5} style={{ maxWidth: 190 }}>
+            <span className="serif-italic" style={{ fontSize: 16 }}>«Стиль — это редактура»</span>
+          </TornPaper>
+        </Cell>
+        <Cell name="SpiralBinding">
+          <SpiralBinding edge="top" rings={9} tone="cream" style={{ maxWidth: 180 }}>
+            <strong style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 15 }}>Call sheet</strong>
+            <div style={{ fontSize: 12, color: 'var(--ink-500)', marginTop: 4 }}>09:00 backstage</div>
+          </SpiralBinding>
+        </Cell>
+        <Cell name="StringBadge">
+          <StringBadge tone="ink" rotate={-5}>
+            <span className="label-micro" style={{ color: 'var(--paper)' }}>Backstage</span>
+            <strong style={{ display: 'block', fontFamily: 'var(--font-display)', textTransform: 'uppercase', marginTop: 2 }}>Access</strong>
+          </StringBadge>
+        </Cell>
+        <Cell name="ScrapCard">
+          <ScrapCard tone="cream" rotate={-2} interactive style={{ maxWidth: 190 }}>
+            <strong style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontSize: 15 }}>Королева ринга</strong>
+            <p style={{ margin: '6px 0 0', fontSize: 12, color: 'var(--ink-500)' }}>Продакшн шоу</p>
+          </ScrapCard>
+        </Cell>
+        <Cell name="ScrapCard · framed">
+          <ScrapCard framed rotate={2} style={{ maxWidth: 190 }}>
+            <span className="label-micro">Editorial</span>
+            <p style={{ margin: '8px 0 0', fontSize: 13 }}>Жирная рамка для акцентных карточек.</p>
+          </ScrapCard>
+        </Cell>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

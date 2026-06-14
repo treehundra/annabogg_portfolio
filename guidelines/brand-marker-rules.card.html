@@ -1,0 +1,36 @@
+<!-- @dsCard group="Brand" viewport="700x230" name="Marker accent — do & don't" subtitle="Red is a drawn gesture, never a UI fill" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 26px 30px; background: #fff; font-family: var(--font-body); display: flex; gap: 40px; }
+  .col { flex: 1; }
+  .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+  .ok { color: #1f8a4c; }
+  .no { color: var(--marker-red); }
+  .word { position: relative; display: inline-block; font-family: var(--font-display); text-transform: uppercase; font-weight: 700; font-size: 30px; }
+  .circle { position: relative; display: inline-block; font-family: var(--font-display); text-transform: uppercase; font-weight: 700; font-size: 30px; padding: 6px 16px; }
+  .badbtn { display: inline-block; background: var(--marker-red); color: #fff; font-family: var(--font-display); text-transform: uppercase; font-weight: 600; font-size: 18px; padding: 12px 22px; opacity: .9; }
+  .strike { position: relative; }
+  .strike::after { content: ""; position: absolute; left: -6px; right: -6px; top: 50%; height: 3px; background: var(--marker-red); transform: rotate(-8deg); }
+</style>
+</head>
+<body>
+  <div class="col">
+    <div class="tag ok">✓ DO — drawn strokes</div>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span class="word">ОПЫТ<svg viewBox="0 0 320 22" preserveAspectRatio="none" style="position:absolute;left:0;right:0;bottom:-10px;width:100%;height:14px;overflow:visible"><path d="M4,13 C70,5 150,17 316,9" fill="none" stroke="var(--marker-red)" stroke-width="5" stroke-linecap="round"/></svg></span>
+      <span class="circle">Анна<svg viewBox="0 0 320 130" preserveAspectRatio="none" style="position:absolute;inset:-20% -8%;width:116%;height:140%;overflow:visible"><path d="M150,10 C70,8 16,30 14,64 C12,100 80,122 168,122 C252,122 312,98 306,60 C300,26 244,10 150,12" fill="none" stroke="var(--marker-red)" stroke-width="4" stroke-linecap="round"/></svg></span>
+    </div>
+  </div>
+  <div class="col">
+    <div class="tag no">✗ DON'T — fills & boxes</div>
+    <div style="display:flex;flex-direction:column;gap:22px;align-items:flex-start">
+      <span class="badbtn strike">Кнопка</span>
+      <div class="strike" style="width:130px;height:46px;background:var(--marker-red);border-radius:8px;opacity:.85"></div>
+    </div>
+  </div>
+</body>
+</html>

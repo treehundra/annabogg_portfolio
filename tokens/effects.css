@@ -1,0 +1,43 @@
+/* ============================================================
+   EFFECTS — Bogomolova Design System
+   Shadows, paper textures and the physical-object cues that
+   make the scrapbook feel real: photo drop shadows, lifted
+   tape, clipped paper, marker bleed.
+   ============================================================ */
+:root {
+  /* ---- Shadows (soft, paper-on-paper, never glossy) ---- */
+  --shadow-paper:    0 1px 2px rgba(0,0,0,0.06), 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-photo:    0 6px 18px rgba(0,0,0,0.18), 0 2px 4px rgba(0,0,0,0.10);
+  --shadow-lift:     0 14px 30px rgba(0,0,0,0.22), 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-tape:     0 1px 3px rgba(0,0,0,0.12);
+  --shadow-clip:     0 3px 6px rgba(0,0,0,0.30);
+  --shadow-inset:    inset 0 0 0 1px rgba(0,0,0,0.04);
+
+  /* ---- Transitions (quick, matte, no bounce) ---- */
+  --ease-out:    cubic-bezier(0.22, 0.61, 0.36, 1);  /* @kind other */
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);     /* @kind other */
+  --dur-fast:    140ms;  /* @kind other */
+  --dur-base:    240ms;  /* @kind other */
+  --dur-slow:    420ms;  /* @kind other */
+
+  /* ---- Photo treatment (b&w editorial) ---- */
+  --filter-bw:       grayscale(1) contrast(1.04);      /* @kind other */
+  --filter-bw-hover: grayscale(0.15) contrast(1.02);   /* @kind other */
+
+  /* ---- Tape gradient (masking-tape body sheen) ---- */
+  --tape-sheen: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.20) 0%,
+      rgba(255,255,255,0.04) 28%,
+      rgba(0,0,0,0.04) 100%);  /* @kind other */
+
+  /* ---- Z layers ---- */
+  --z-base:    1;    /* @kind other */
+  --z-photo:   10;   /* @kind other */
+  --z-tape:    20;   /* @kind other */
+  --z-clip:    30;   /* @kind other */
+  --z-overlay: 100;  /* @kind other */
+}
+
+/* ---- Paper grain helper removed (SVG data-URL with filter ref
+   incompatible with bundler; re-add via inline SVG if needed) ---- */

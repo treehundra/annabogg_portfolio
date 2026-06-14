@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Photo treatment" subtitle="Full-colour editorial; B&W reserved for cover & portraits" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-body); display: flex; gap: 20px; align-items: center; }
+  .ph { width: 120px; height: 150px; background: var(--photo-bg); position: relative; box-shadow: var(--shadow-photo); overflow: hidden; }
+  .ph .grad { position: absolute; inset: 0; background: linear-gradient(135deg,#7BA7D9,#C36B8E 55%,#E0B25A); }
+  .ph.bw .grad { filter: var(--filter-bw); }
+  .ph span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-body); font-weight: 600; font-size: 11px; letter-spacing: .14em; color: rgba(255,255,255,.9); }
+  .note { flex: 1; }
+  .h { font-family: var(--font-display); text-transform: uppercase; font-weight: 800; font-size: 22px; }
+  .b { font-family: var(--font-serif); font-size: 14px; color: var(--ink-700); line-height: 1.55; max-width: 46ch; margin-top: 8px; }
+  .x { font-family: var(--font-body); font-weight: 600; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-300); margin-top: 14px; }
+</style>
+</head>
+<body>
+  <div class="ph"><div class="grad"></div><span>COLOUR</span></div>
+  <div class="ph bw"><div class="grad"></div><span>B&amp;W</span></div>
+  <div class="note">
+    <div class="h">Цвет — норма</div>
+    <div class="b">Editorial-съёмки публикуются в полном цвете. Чёрно-белый режим — для обложки и портретов (Polaroid <code>bw</code> / <code>--filter-bw</code>).</div>
+    <div class="x">Polaroid bw · filter: grayscale(1) contrast(1.04)</div>
+  </div>
+</body>
+</html>

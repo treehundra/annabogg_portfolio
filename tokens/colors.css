@@ -1,0 +1,55 @@
+/* ============================================================
+   COLORS — Bogomolova Design System
+   A printed-fashion-zine palette: pure paper white, dense ink
+   black, a single marker red used ONLY as a drawn accent.
+   Everything else is a paper / photo-grey neutral.
+   ============================================================ */
+:root {
+  /* ---- Paper (backgrounds, surfaces) ---- */
+  --paper:        #FFFFFF;   /* the page — pure white */
+  --paper-cream:  #FAF8F2;   /* taped notes, sticky scraps */
+  --paper-aged:   #F1ECE0;   /* older clipping / kraft-ish */
+  --paper-grey:   #ECECEA;   /* photo mat, neutral fill */
+
+  /* ---- Ink (text, rules, hairlines) ---- */
+  --ink:      #111111;   /* primary text, near-black */
+  --ink-700:  #2E2E2E;   /* strong secondary */
+  --ink-500:  #5C5C5C;   /* secondary text */
+  --ink-300:  #9A9A9A;   /* muted / captions */
+  --ink-150:  #C9C9C7;   /* faint rules */
+  --ink-100:  #DEDEDC;   /* hairline borders */
+
+  /* ---- Marker red (the only chromatic accent) ---- */
+  --marker-red:       #E5251D;  /* drawn strokes, underlines, circles */
+  --marker-red-deep:  #C2160F;  /* pressed / darker stroke */
+  --marker-red-ink:   rgba(229, 37, 29, 0.92);
+
+  /* ---- Tape (translucent overlays for masking-tape strips) ---- */
+  --tape-warm:  rgba(226, 216, 192, 0.62);
+  --tape-cool:  rgba(208, 218, 220, 0.58);
+  --tape-edge:  rgba(0, 0, 0, 0.06);
+
+  /* ---- Photo (black & white editorial imagery) ---- */
+  --photo-bg:   #DBDBD8;  /* placeholder fill behind b&w photos */
+  --photo-tint: #1A1A1A;  /* duotone shadow tint */
+
+  /* ================= SEMANTIC ALIASES ================= */
+  --bg-page:         var(--paper);
+  --bg-note:         var(--paper-cream);
+  --bg-clipping:     var(--paper-aged);
+
+  --surface-card:    var(--paper);
+  --surface-photo:   var(--photo-bg);
+
+  --text-primary:    var(--ink);
+  --text-secondary:  var(--ink-500);
+  --text-muted:      var(--ink-300);
+  --text-inverse:    var(--paper);
+
+  --accent:          var(--marker-red);
+  --accent-pressed:  var(--marker-red-deep);
+
+  --border-strong:   var(--ink);
+  --border-hairline: var(--ink-100);
+  --rule:            var(--ink-150);
+}

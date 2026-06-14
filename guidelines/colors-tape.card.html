@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Tape & photo" subtitle="Translucent tape tints and the b&w photo placeholder" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 22px; background: #fff; font-family: var(--font-body); }
+  .row { display: flex; gap: 16px; align-items: stretch; }
+  .sw { flex: 1; }
+  .chip { height: 80px; border-radius: var(--radius-photo); position: relative; overflow: hidden; }
+  /* checker behind tape to reveal translucency */
+  .checker { background-image: linear-gradient(45deg,#e5e5e3 25%,transparent 25%),linear-gradient(-45deg,#e5e5e3 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e5e5e3 75%),linear-gradient(-45deg,transparent 75%,#e5e5e3 75%); background-size:16px 16px; background-position:0 0,0 8px,8px -8px,-8px 0; }
+  .tape { position: absolute; inset: 0; background-image: var(--tape-sheen); }
+  .name { font-family: var(--font-display); text-transform: uppercase; font-weight: 600; font-size: 12px; margin-top: 9px; }
+  .hex { font-family: var(--font-mono); font-size: 10px; color: var(--ink-300); letter-spacing: .06em; }
+  .photolbl { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family: var(--font-mono); font-size: 11px; letter-spacing: .16em; color: var(--ink-300); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip checker"><div class="tape" style="background-color:var(--tape-warm)"></div></div><div class="name">Tape warm</div><div class="hex">rgba(226,216,192,.62)</div></div>
+    <div class="sw"><div class="chip checker"><div class="tape" style="background-color:var(--tape-cool)"></div></div><div class="name">Tape cool</div><div class="hex">rgba(208,218,220,.58)</div></div>
+    <div class="sw"><div class="chip" style="background:var(--photo-bg)"><div class="photolbl">ФОТО</div></div><div class="name">Photo fill</div><div class="hex">#DBDBD8 · b&w</div></div>
+  </div>
+</body>
+</html>

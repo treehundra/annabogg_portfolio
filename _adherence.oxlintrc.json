@@ -1,0 +1,433 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/decor/**",
+              "components/typography/**",
+              "ui_kits/portfolio/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Montserrat|Pinyon Script|PT Serif|Caveat))/i]",
+        "message": "Font not provided by the design system. Available: Montserrat, Pinyon Script, PT Serif, Caveat."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|dot|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: variant, dot, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:outline|solid|plain)$/]",
+        "message": "<Badge> variant must be one of 'outline' | 'solid' | 'plain'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BulldogClip'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|tone|rotate|className|style|key|ref|className|style|children)$/]",
+        "message": "<BulldogClip> doesn't accept that prop. Declared props: size, tone, rotate, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BulldogClip'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:steel|black)$/]",
+        "message": "<BulldogClip> tone must be one of 'steel' | 'black'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|type|disabled|onClick|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, type, disabled, onClick, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:solid|outline|marker|ghost)$/]",
+        "message": "<Button> variant must be one of 'solid' | 'outline' | 'marker' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit|reset)$/]",
+        "message": "<Button> type must be one of 'button' | 'submit' | 'reset'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MarkerStroke'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|color|thickness|opacity|width|height|className|style|key|ref|className|style|children)$/]",
+        "message": "<MarkerStroke> doesn't accept that prop. Declared props: variant, color, thickness, opacity, width, height, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MarkerStroke'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:underline|underline2|strike|slash|circle|highlight|check)$/]",
+        "message": "<MarkerStroke> variant must be one of 'underline' | 'underline2' | 'strike' | 'slash' | 'circle' | 'highlight' | 'check'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Polaroid'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|caption|ratio|width|rotate|bw|className|style|key|ref|className|style|children)$/]",
+        "message": "<Polaroid> doesn't accept that prop. Declared props: src, alt, caption, ratio, width, rotate, bw, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScrapCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|rotate|interactive|framed|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<ScrapCard> doesn't accept that prop. Declared props: tone, rotate, interactive, framed, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScrapCard'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:paper|cream|aged)$/]",
+        "message": "<ScrapCard> tone must be one of 'paper' | 'cream' | 'aged'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|subtitle|index|marker|align|level|className|style|key|ref|className|style|children)$/]",
+        "message": "<SectionHeading> doesn't accept that prop. Declared props: title, subtitle, index, marker, align, level, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center|right)$/]",
+        "message": "<SectionHeading> align must be one of 'left' | 'center' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpiralBinding'] > JSXAttribute > JSXIdentifier[name!=/^(?:edge|rings|tone|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<SpiralBinding> doesn't accept that prop. Declared props: edge, rings, tone, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpiralBinding'] > JSXAttribute[name.name='edge'] > Literal[value!=/^(?:top|bottom|left|right)$/]",
+        "message": "<SpiralBinding> edge must be one of 'top' | 'bottom' | 'left' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpiralBinding'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:paper|cream|aged)$/]",
+        "message": "<SpiralBinding> tone must be one of 'paper' | 'cream' | 'aged'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StringBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:cordLength|cordColor|tone|rotate|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<StringBadge> doesn't accept that prop. Declared props: cordLength, cordColor, tone, rotate, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StringBadge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:paper|cream|aged|ink)$/]",
+        "message": "<StringBadge> tone must be one of 'paper' | 'cream' | 'aged' | 'ink'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: variant, size, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:outline|solid|ghost)$/]",
+        "message": "<Tag> variant must be one of 'outline' | 'solid' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md)$/]",
+        "message": "<Tag> size must be one of 'sm' | 'md'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TapeStrip'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|width|rotate|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<TapeStrip> doesn't accept that prop. Declared props: variant, width, rotate, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TapeStrip'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:warm|cool|paper)$/]",
+        "message": "<TapeStrip> variant must be one of 'warm' | 'cool' | 'paper'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornPaper'] > JSXAttribute > JSXIdentifier[name!=/^(?:edges|tone|amplitude|rotate|children|className|style|key|ref|className|style|children)$/]",
+        "message": "<TornPaper> doesn't accept that prop. Declared props: edges, tone, amplitude, rotate, children, className, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornPaper'] > JSXAttribute[name.name='edges'] > Literal[value!=/^(?:top|bottom|both)$/]",
+        "message": "<TornPaper> edges must be one of 'top' | 'bottom' | 'both'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TornPaper'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:paper|cream|aged)$/]",
+        "message": "<TornPaper> tone must be one of 'paper' | 'cream' | 'aged'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "BulldogClip": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "MarkerStroke": {
+        "replaces": []
+      },
+      "Polaroid": {
+        "replaces": []
+      },
+      "ScrapCard": {
+        "replaces": []
+      },
+      "SectionHeading": {
+        "replaces": []
+      },
+      "SpiralBinding": {
+        "replaces": []
+      },
+      "StringBadge": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      },
+      "TapeStrip": {
+        "replaces": []
+      },
+      "TornPaper": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-pressed",
+      "--bg-clipping",
+      "--bg-note",
+      "--bg-page",
+      "--border-hairline",
+      "--border-strong",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-in-out",
+      "--ease-out",
+      "--filter-bw",
+      "--filter-bw-hover",
+      "--font-body",
+      "--font-display",
+      "--font-hand",
+      "--font-marker",
+      "--font-mono",
+      "--font-script",
+      "--font-serif",
+      "--fw-black",
+      "--fw-bold",
+      "--fw-extrabold",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--ink",
+      "--ink-100",
+      "--ink-150",
+      "--ink-300",
+      "--ink-500",
+      "--ink-700",
+      "--lh-normal",
+      "--lh-relaxed",
+      "--lh-snug",
+      "--lh-tight",
+      "--ls-display",
+      "--ls-label",
+      "--ls-normal",
+      "--ls-tight",
+      "--marker-red",
+      "--marker-red-deep",
+      "--marker-red-ink",
+      "--page-gutter",
+      "--page-max",
+      "--paper",
+      "--paper-aged",
+      "--paper-cream",
+      "--paper-grey",
+      "--photo-bg",
+      "--photo-tint",
+      "--radius-badge",
+      "--radius-chip",
+      "--radius-none",
+      "--radius-photo",
+      "--rot-lg",
+      "--rot-md",
+      "--rot-sm",
+      "--rot-xs",
+      "--rule",
+      "--section-gap",
+      "--shadow-clip",
+      "--shadow-inset",
+      "--shadow-lift",
+      "--shadow-paper",
+      "--shadow-photo",
+      "--shadow-tape",
+      "--space-0",
+      "--space-1",
+      "--space-10",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--stroke-bold",
+      "--stroke-hair",
+      "--stroke-rule",
+      "--surface-card",
+      "--surface-photo",
+      "--tape-cool",
+      "--tape-edge",
+      "--tape-sheen",
+      "--tape-warm",
+      "--text-body",
+      "--text-display",
+      "--text-headline",
+      "--text-hero",
+      "--text-inverse",
+      "--text-lead",
+      "--text-marker",
+      "--text-micro",
+      "--text-muted",
+      "--text-primary",
+      "--text-script",
+      "--text-script-lg",
+      "--text-secondary",
+      "--text-small",
+      "--text-title",
+      "--z-base",
+      "--z-clip",
+      "--z-overlay",
+      "--z-photo",
+      "--z-tape"
+    ],
+    "tokenKinds": {
+      "--paper": "color",
+      "--paper-cream": "color",
+      "--paper-aged": "color",
+      "--paper-grey": "color",
+      "--ink": "color",
+      "--ink-700": "color",
+      "--ink-500": "color",
+      "--ink-300": "color",
+      "--ink-150": "color",
+      "--ink-100": "color",
+      "--marker-red": "color",
+      "--marker-red-deep": "color",
+      "--marker-red-ink": "color",
+      "--tape-warm": "color",
+      "--tape-cool": "color",
+      "--tape-edge": "color",
+      "--photo-bg": "color",
+      "--photo-tint": "color",
+      "--bg-page": "color",
+      "--bg-note": "color",
+      "--bg-clipping": "color",
+      "--surface-card": "color",
+      "--surface-photo": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-muted": "font",
+      "--text-inverse": "font",
+      "--accent": "color",
+      "--accent-pressed": "color",
+      "--border-strong": "color",
+      "--border-hairline": "color",
+      "--rule": "color",
+      "--font-display": "font",
+      "--font-script": "font",
+      "--font-serif": "font",
+      "--font-body": "font",
+      "--font-marker": "font",
+      "--font-hand": "font",
+      "--font-mono": "font",
+      "--fw-regular": "other",
+      "--fw-medium": "other",
+      "--fw-semibold": "other",
+      "--fw-bold": "other",
+      "--fw-extrabold": "other",
+      "--fw-black": "other",
+      "--text-hero": "font",
+      "--text-display": "font",
+      "--text-headline": "font",
+      "--text-title": "font",
+      "--text-script-lg": "font",
+      "--text-script": "font",
+      "--text-lead": "font",
+      "--text-body": "font",
+      "--text-small": "font",
+      "--text-micro": "font",
+      "--text-marker": "font",
+      "--lh-tight": "other",
+      "--lh-snug": "other",
+      "--lh-normal": "other",
+      "--lh-relaxed": "other",
+      "--ls-display": "other",
+      "--ls-label": "other",
+      "--ls-tight": "other",
+      "--ls-normal": "other",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--page-max": "spacing",
+      "--page-gutter": "spacing",
+      "--section-gap": "spacing",
+      "--radius-none": "radius",
+      "--radius-photo": "radius",
+      "--radius-chip": "radius",
+      "--radius-badge": "radius",
+      "--stroke-hair": "color",
+      "--stroke-rule": "color",
+      "--stroke-bold": "color",
+      "--rot-xs": "other",
+      "--rot-sm": "other",
+      "--rot-md": "other",
+      "--rot-lg": "other",
+      "--shadow-paper": "shadow",
+      "--shadow-photo": "shadow",
+      "--shadow-lift": "shadow",
+      "--shadow-tape": "shadow",
+      "--shadow-clip": "shadow",
+      "--shadow-inset": "shadow",
+      "--ease-out": "other",
+      "--ease-in-out": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other",
+      "--filter-bw": "other",
+      "--filter-bw-hover": "other",
+      "--tape-sheen": "other",
+      "--z-base": "other",
+      "--z-photo": "other",
+      "--z-tape": "other",
+      "--z-clip": "other",
+      "--z-overlay": "other"
+    },
+    "fontFamilies": [
+      "Caveat",
+      "Montserrat",
+      "PT Serif",
+      "Pinyon Script"
+    ]
+  }
+}

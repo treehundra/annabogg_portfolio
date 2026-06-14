@@ -1,0 +1,22 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Radii & rotation" subtitle="Editorial = sharp corners; scrapbook = slight tilt" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-body); display: flex; gap: 34px; align-items: center; }
+  .box { width: 92px; height: 72px; background: var(--paper-cream); border: 1.5px solid var(--ink); display: flex; align-items: center; justify-content: center; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-300); margin-top: 10px; text-align: center; }
+  .item { text-align: center; }
+  .pill { width: 92px; height: 38px; border-radius: 999px; background: var(--ink); }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:0"></div><div class="lbl">none · 0</div></div>
+  <div class="item"><div class="box" style="border-radius:2px"></div><div class="lbl">photo · 2</div></div>
+  <div class="item"><div class="pill"></div><div class="lbl">chip · 999</div></div>
+  <div class="item"><div class="box" style="transform:rotate(-3.5deg)"></div><div class="lbl">rot-md · -3.5°</div></div>
+  <div class="item"><div class="box" style="transform:rotate(5deg)"></div><div class="lbl">rot-lg · 5°</div></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" viewport="700x190" name="Shadows" subtitle="Soft paper-on-paper depth — paper · photo · lift · clip" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 30px 24px; background: #fff; font-family: var(--font-body); display: flex; gap: 38px; align-items: center; }
+  .box { width: 110px; height: 80px; background: var(--paper); border-radius: var(--radius-photo); }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-300); margin-top: 16px; text-align: center; }
+  .item { text-align: center; }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-paper)"></div><div class="lbl">paper</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-photo)"></div><div class="lbl">photo</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-lift)"></div><div class="lbl">lift · hover</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-clip)"></div><div class="lbl">clip</div></div>
+</body>
+</html>

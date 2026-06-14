@@ -1,0 +1,23 @@
+/* ============================================================
+   FONTS — Bogomolova Design System
+   Grounded in the real portfolio deck (Богомолова Анна, 2025).
+   All families carry full Cyrillic + Latin coverage and are
+   loaded from Google Fonts.
+
+   The deck was authored in Canva; these are the nearest-match
+   Google Fonts to the faces actually used:
+
+   · Display caps (PORTFOLIO / EXPERIENCE / PROD & STYLE …)
+       real: a wide bold neo-grotesque  →  Montserrat (700–900)
+   · Calligraphic subheads ("Fashion & Creative", years,
+       "Professional goal", "Editorial. Fashion magazines")
+       real: formal copperplate script  →  Pinyon Script
+   · Serif body / lists ("Снобъ — журнал №111", skill bullets)
+       real: transitional serif         →  PT Serif
+   · Sans body / captions / nav tabs
+       real: same grotesque             →  Montserrat (400–600)
+   · Cover signature "БОГОМОЛОВА АННА"
+       real: a fat felt-tip marker hand →  Caveat (heaviest)
+       ⚠ nearest Cyrillic marker face — see CAVEATS in readme.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Pinyon+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@500;600;700&display=swap');

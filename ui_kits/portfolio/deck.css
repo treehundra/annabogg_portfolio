@@ -1,0 +1,254 @@
+/* ============================================================
+   Bogomolova Portfolio — faithful recreation of the 17-page deck.
+   Uses the design-system tokens (../../styles.css).
+   ============================================================ */
+deck-stage:not(:defined) { visibility: hidden; }
+* { box-sizing: border-box; }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  padding: 70px 84px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Display section titles (Montserrat 800 caps) ---- */
+.sec-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
+  margin: 0;
+  color: var(--ink);
+}
+.t-xxl { font-size: 150px; }   /* PORTFOLIO cover */
+.t-xl  { font-size: 120px; }   /* EDITORIAL STYLING / PROD & STYLE */
+.t-lg  { font-size: 96px; }
+.t-md  { font-size: 66px; }
+
+.script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink);
+}
+.serif { font-family: var(--font-serif); }
+.serif-i { font-family: var(--font-serif); font-style: italic; }
+
+.kicker {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  color: var(--ink-700);
+}
+
+/* ---- Caption blocks (bold body, bottom of gallery slides) ---- */
+.cap {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0;
+}
+.cap-serif { font-family: var(--font-serif); font-weight: 700; }
+.link {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   GALLERY — rows of true-aspect photos, white letterbox blends in
+   ============================================================ */
+.gallery { display: flex; flex-direction: column; width: 100%; }
+.grow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ggap, 26px);
+  flex: 1 1 0;
+  min-height: 0;
+}
+.grow img {
+  max-height: 100%;
+  max-width: calc((100% - (var(--n) - 1) * var(--ggap, 26px)) / var(--n));
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: var(--photo-bg);
+}
+
+/* Standard gallery slide scaffold: title / gallery / caption */
+.layout-gallery {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 28px;
+  padding: 64px 80px 56px;
+}
+.cap-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+.cap-row .right { text-align: right; }
+
+/* ============================================================
+   SCRAPBOOK CHROME
+   ============================================================ */
+
+/* Masking tape */
+.tape {
+  position: absolute;
+  background-color: var(--tape-warm);
+  background-image: var(--tape-sheen);
+  box-shadow: var(--shadow-tape);
+  clip-path: polygon(0 0,100% 0,98% 50%,100% 100%,0 100%,2% 50%);
+  z-index: 30;
+}
+.tape.cool { background-color: var(--tape-cool); }
+.tape.paper { background-color: rgba(250,248,242,0.82); }
+
+/* Polaroid frame */
+.polaroid {
+  background: var(--paper);
+  padding: 14px 14px 0;
+  box-shadow: var(--shadow-photo);
+  border-radius: var(--radius-photo);
+}
+.polaroid img { width: 100%; display: block; background: var(--photo-bg); object-fit: cover; }
+.polaroid .pcap {
+  font-family: var(--font-marker);
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  color: var(--ink-700);
+  padding: 8px 4px 14px;
+  line-height: 1;
+}
+.bw img { filter: var(--filter-bw); }
+
+/* Plain framed photo (thin mat) */
+.framed {
+  background: var(--paper-aged);
+  padding: 12px;
+  box-shadow: var(--shadow-photo);
+}
+.framed img { display: block; width: 100%; }
+
+/* Bulldog binder clip (CSS) */
+.clip { position: absolute; width: 120px; height: 92px; z-index: 40; }
+.clip .body {
+  position: absolute; left: 22px; top: 18px; width: 76px; height: 74px;
+  background: linear-gradient(180deg,#3a3a3a,#111 60%,#000);
+  clip-path: polygon(0 0,100% 0,86% 100%,14% 100%);
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,.4), inset 0 2px 2px rgba(255,255,255,.25);
+}
+.clip .arm { position: absolute; top: 6px; width: 44px; height: 56px; border: 3px solid #8c8f96; border-bottom: none; border-radius: 60% 60% 0 0; }
+.clip .arm.l { left: 18px; transform: rotate(-7deg); }
+.clip .arm.r { left: 56px; transform: rotate(7deg); }
+
+/* Paper clip */
+.paperclip {
+  position: absolute; width: 34px; height: 96px; z-index: 40;
+  border: 6px solid #b9bcc2; border-radius: 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+/* Torn-edge paper card */
+.torn {
+  position: relative; background: var(--paper-cream);
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.16));
+  padding: 44px 52px;
+  clip-path: polygon(0% 4%,8% 0,22% 5%,38% 1%,54% 6%,70% 1%,86% 5%,100% 0,98% 18%,100% 38%,99% 60%,100% 82%,98% 100%,82% 96%,66% 100%,50% 95%,34% 100%,18% 96%,4% 100%,2% 78%,0 56%,1% 32%);
+}
+.torn.white { background: var(--paper); }
+.torn.aged { background: var(--paper-aged); }
+
+/* Spiral notebook */
+.spiral {
+  position: relative; background: var(--paper);
+  box-shadow: var(--shadow-paper);
+  border-radius: 4px 14px 14px 4px;
+  padding: 48px 56px 48px 96px;
+}
+.spiral .rings {
+  position: absolute; left: -10px; top: 26px; bottom: 26px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.spiral .ring {
+  width: 44px; height: 16px; border: 3px solid;
+  border-image: linear-gradient(180deg,#e6e7ea,#9a9ea6,#6f747c) 1;
+  border-radius: 50%; transform: rotate(74deg);
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+/* Notebook index tabs */
+.tabs {
+  position: absolute; right: -26px; top: 60px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.tabs .tab {
+  background: var(--paper-grey); color: var(--ink-500);
+  font-family: var(--font-body); font-size: 17px; font-weight: 600;
+  padding: 10px 14px; writing-mode: vertical-rl; text-orientation: mixed;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.12); border-radius: 0 6px 6px 0;
+}
+
+/* Deckle / scalloped note (soft) */
+.deckle {
+  position: relative; background: var(--paper);
+  box-shadow: var(--shadow-photo);
+  padding: 48px 56px; border-radius: 10px;
+  outline: 3px dashed rgba(0,0,0,0.06); outline-offset: -10px;
+}
+
+/* Lanyard badge (hang tag on a cord) */
+.lanyard { position: absolute; display: flex; flex-direction: column; align-items: center; z-index: 35; }
+.lanyard .cord { width: 3px; height: 70px; background: var(--ink-700); }
+.lanyard .tag {
+  margin-top: -3px; background: var(--paper); border: 1px solid var(--ink-100);
+  box-shadow: var(--shadow-photo); padding: 22px 26px; border-radius: 6px;
+  position: relative; text-align: center;
+}
+.lanyard .tag::before {
+  content: ""; position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+  width: 16px; height: 16px; border-radius: 50%; background: var(--paper);
+  box-shadow: inset 0 0 0 2px #9a9ea6;
+}
+.lanyard .tag .inner { margin-top: 16px; }
+
+/* Marker scribbles (the only red) */
+.scribble { position: absolute; z-index: 5; pointer-events: none; }
+
+/* Bullet lists */
+.blist { list-style: none; margin: 0; padding: 0; }
+.blist li { position: relative; padding-left: 26px; margin: 0 0 10px; line-height: 1.4; }
+.blist li::before { content: "·"; position: absolute; left: 6px; top: -2px; font-weight: 700; font-size: 1.3em; }
+.blist.serif li { font-family: var(--font-serif); }
+
+/* Contact block */
+.contacts { font-family: var(--font-serif); font-size: 30px; line-height: 1.6; color: var(--ink); }
+.contacts .h { font-family: var(--font-body); font-weight: 700; }
+.contacts u { text-underline-offset: 3px; }
+
+/* utility */
+.rot-n5 { transform: rotate(-5deg); }
+.rot-n3 { transform: rotate(-3deg); }
+.rot-n2 { transform: rotate(-2deg); }
+.rot-2  { transform: rotate(2deg); }
+.rot-3  { transform: rotate(3deg); }
+.rot-5  { transform: rotate(5deg); }
+.abs { position: absolute; }

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Paper" subtitle="Backgrounds & surfaces — the white page is the canvas" -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 22px; background: #fff; font-family: var(--font-body); }
+  .row { display: flex; gap: 16px; }
+  .sw { flex: 1; }
+  .chip { height: 72px; border: 1px solid var(--ink-100); border-radius: var(--radius-photo); }
+  .name { font-family: var(--font-display); text-transform: uppercase; font-weight: 600; font-size: 13px; letter-spacing: .04em; margin-top: 10px; }
+  .hex { font-family: var(--font-mono); font-size: 11px; color: var(--ink-300); letter-spacing: .08em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--paper)"></div><div class="name">Paper</div><div class="hex">#FFFFFF</div></div>
+    <div class="sw"><div class="chip" style="background:var(--paper-cream)"></div><div class="name">Cream</div><div class="hex">#FAF8F2</div></div>
+    <div class="sw"><div class="chip" style="background:var(--paper-aged)"></div><div class="name">Aged</div><div class="hex">#F1ECE0</div></div>
+    <div class="sw"><div class="chip" style="background:var(--paper-grey)"></div><div class="name">Grey</div><div class="hex">#ECECEA</div></div>
+  </div>
+</body>
+</html>
