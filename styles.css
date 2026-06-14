@@ -1,0 +1,11 @@
+/* ============================================================
+   Bogomolova Design System — global entry point.
+   Consumers link THIS single file. It only @imports; all real
+   declarations live in the token files it reaches.
+   ============================================================ */
+@import url("tokens/fonts.css");
+@import url("tokens/colors.css");
+@import url("tokens/typography.css");
+@import url("tokens/spacing.css");
+@import url("tokens/effects.css");
+@import url("tokens/base.css");
