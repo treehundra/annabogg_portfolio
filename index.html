@@ -92,16 +92,13 @@ a{color:inherit;}
 .sh-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(38px,4.5vw,78px);line-height:.91;letter-spacing:-.01em;margin:0;}
 .sh-sub{font-family:var(--font-script);font-size:clamp(20px,2.2vw,32px);color:var(--ink-500);margin-top:6px;}
 
-
-/* Cover version: source mockup has no fixed navigation/dots on the first page */
-.nav,.page-dots,#prog{display:none!important;}
 /* ── Hero / cover ── */
 #hero{
   min-height:100svh;
   padding:clamp(28px,3.2vw,48px) clamp(28px,5vw,72px) clamp(44px,5vw,78px);
   display:grid;
   grid-template-columns:minmax(260px,420px) minmax(360px,1fr) minmax(300px,440px);
-  grid-template-rows:auto auto minmax(360px,1fr);
+  grid-template-rows:auto minmax(360px,1fr);
   gap:clamp(16px,2vw,34px) clamp(42px,7vw,116px);
   align-items:center;
   justify-content:center;
@@ -110,34 +107,6 @@ a{color:inherit;}
   position:relative;
 }
 #hero > *{min-width:0;}
-.hero-title{
-  grid-column:1 / -1;
-  justify-self:center;
-  position:relative;
-  font-family:var(--font-display);
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:-.055em;
-  line-height:.82;
-  font-size:clamp(86px,10.2vw,170px);
-  color:#000;
-  margin-top:4px;
-}
-.hero-title::after{
-  content:"";
-  position:absolute;
-  right:clamp(-66px,-4vw,-28px);
-  top:clamp(-28px,-1.4vw,-10px);
-  width:clamp(88px,8vw,140px);
-  height:clamp(88px,8vw,140px);
-  background:
-    radial-gradient(ellipse at 48% 48%, transparent 38%, var(--marker-red) 39% 43%, transparent 44%),
-    radial-gradient(ellipse at 56% 42%, transparent 34%, #111 35% 38%, transparent 39%);
-  transform:rotate(18deg);
-  opacity:.95;
-  mix-blend-mode:multiply;
-  pointer-events:none;
-}
 .hero-name{
   grid-column:1 / -1;
   justify-self:center;
@@ -153,19 +122,19 @@ a{color:inherit;}
 }
 .hero-name img{height:clamp(48px,5.6vw,86px);width:auto;mix-blend-mode:multiply;margin:0 -1px;flex:0 0 auto;}
 .hero-name .name-gap{width:clamp(28px,5vw,72px);flex-shrink:0;}
-.hero-center{grid-column:2;grid-row:3;align-self:center;justify-self:center;text-align:center;max-width:560px;}
+.hero-center{grid-column:2;grid-row:2;align-self:center;justify-self:center;text-align:center;max-width:560px;}
 .hero-kicker{display:none;}
 .hero-role{font-family:var(--font-body);font-size:clamp(22px,1.9vw,34px);font-weight:400;color:var(--ink);line-height:1.18;margin:0 0 28px;}
 .hero-contacts{font-family:var(--font-serif);font-size:clamp(18px,1.45vw,27px);line-height:1.35;color:var(--ink);}
 .hero-contacts strong{display:block;font-family:var(--font-display);font-size:clamp(20px,1.7vw,30px);line-height:1.2;margin-bottom:4px;}
 .hero-contacts a{text-underline-offset:4px;}
 .hero-bio,.hero-btns{display:none;}
-.hero-photo-wrap{grid-column:1;grid-row:3;position:relative;width:min(100%,360px);justify-self:center;align-self:center;}
+.hero-photo-wrap{grid-column:1;grid-row:2;position:relative;width:min(100%,360px);justify-self:center;align-self:center;}
 .hero-pol{transform:none;box-shadow:none;background:rgba(255,255,255,.72);padding:20px 20px 66px;}
 .hero-pol img{aspect-ratio:1/1;filter:grayscale(100%) contrast(1.04);}
 .hero-pol .pol-cap{display:none;}
 .hero-doodle{position:absolute;bottom:-72px;left:-42px;right:auto;width:130px;pointer-events:none;z-index:4;}
-.hero-photo-right{grid-column:3;grid-row:3;position:relative;width:min(100%,420px);justify-self:center;align-self:center;background:rgba(255,255,255,.72);padding:16px;box-shadow:0 2px 18px rgba(0,0,0,.08);}
+.hero-photo-right{grid-column:3;grid-row:2;position:relative;width:min(100%,420px);justify-self:center;align-self:center;background:rgba(255,255,255,.72);padding:16px;box-shadow:0 2px 18px rgba(0,0,0,.08);}
 .hero-photo-right img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;filter:grayscale(100%) contrast(1.05);}
 .hero-photo-right .tp{position:absolute;z-index:2;}
 /* keep the collage tapes close to the photos */
@@ -311,13 +280,13 @@ a{color:inherit;}
 @media(max-width:1100px){
   #hero{grid-template-columns:minmax(220px,320px) minmax(320px,1fr);grid-template-rows:auto auto auto auto;gap:24px 48px;}
   .hero-title,.hero-name{grid-column:1 / -1;}
-  .hero-photo-wrap{grid-column:1;grid-row:3;}
-  .hero-center{grid-column:2;grid-row:3;}
+  .hero-photo-wrap{grid-column:1;grid-row:2;}
+  .hero-center{grid-column:2;grid-row:2;}
   .hero-photo-right{grid-column:1 / -1;grid-row:4;width:min(360px,60vw);}
 }
 @media(max-width:900px){
-  #hero{grid-template-columns:1fr;grid-template-rows:auto auto auto auto auto;text-align:center;gap:22px;padding-top:40px;}
-  .hero-title,.hero-name,.hero-photo-wrap,.hero-center,.hero-photo-right{grid-column:1;grid-row:auto;}
+  #hero{grid-template-columns:1fr;grid-template-rows:auto auto auto auto;text-align:center;gap:22px;padding-top:40px;}
+  .hero-name,.hero-photo-wrap,.hero-center,.hero-photo-right{grid-column:1;grid-row:auto;}
   .hero-photo-wrap{width:min(320px,78vw);margin:0 auto;}
   .hero-photo-right{width:min(360px,82vw);}
   .hero-name img{height:clamp(30px,7.2vw,54px);}
@@ -371,7 +340,6 @@ a{color:inherit;}
      HERO
 ═══════════════════════════════ -->
 <section id="hero" data-screen-label="Hero">
-  <div class="hero-title">PORTFOLIO</div>
   <h1 class="hero-name">
         <img src="photos/letter-b.png?v=3" alt="Б"/><img src="photos/letter-l.png?v=3" alt="О"/><img src="photos/letter-n.png?v=3" alt="Г"/><img src="photos/letter-l.png?v=3" alt="О"/><img src="photos/letter-m.png?v=3" alt="М"/><img src="photos/letter-l.png?v=3" alt="О"/><img src="photos/letter-g.png?v=3" alt="Л"/><img src="photos/letter-l.png?v=3" alt="О"/><img src="photos/letter-o.png?v=3" alt="В"/><img src="photos/letter-a.png?v=3" alt="А"/><span class="name-gap"></span><img src="photos/letter-a.png?v=3" alt="А"/><img src="photos/letter-v.png?v=3" alt="Н"/><img src="photos/letter-v.png?v=3" alt="Н"/><img src="photos/letter-a.png?v=3" alt="А"/>
     </h1>
@@ -677,11 +645,11 @@ a{color:inherit;}
       <div>
         <span class="goal-script">Professional goal:</span>
         <p class="goal-text">Развиваться как Editorial Stylist и Art Director, создавая визуальные концепции для глянцевых медиа, рекламных кампаний и fashion-брендов. Стремлюсь работать на стыке стилизации, креативного продюсирования и художественного руководства, формируя сильные визуальные истории и узнаваемую эстетику.</p>
-        <a href="/cdn-cgi/l/email-protection#25674a424a484a494a5344644b4b440b56515c655c444b41405d0b5750" class="btn btn-inv">Написать письмо</a>
+        <a href="mailto:BogomolovaAnna.sty@yandex.ru" class="btn btn-inv">Написать письмо</a>
       </div>
       <div class="contact-list">
         <div><strong>Телефон</strong>+7 916 838-06-76</div>
-        <div><strong>Email</strong><a href="/cdn-cgi/l/email-protection#5a18353d35373536352c3b1b34343b74292e231a233b343e3f2274282f"><span class="__cf_email__" data-cfemail="c98ba6aea6a4a6a5a6bfa888a7a7a8e7babdb089b0a8a7adacb1e7bbbc">[email&#160;protected]</span></a></div>
+        <div><strong>Email</strong><a href="mailto:BogomolovaAnna.sty@yandex.ru">BogomolovaAnna.sty@yandex.ru</a></div>
         <div><strong>Instagram / Telegram</strong>@anyabogg</div>
         <div><strong>Город</strong>Москва</div>
         <div><strong>Дата рождения</strong>26.11.2004</div>
@@ -719,7 +687,7 @@ a{color:inherit;}
   <img id="zmImg" src="" alt=""/>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ── Work cases data ──────────────────── */
 var CASES = [
   {id:'lofficiel', title:"L'Officiel × Неделя Вьетнама в Москве", cats:['editorial'], label:'Editorial Styling', year:'2025', pub:"L'Officiel — №278, лето 2025", cover:'photos/p06-02.jpg', desc:"Ассистирование на съёмке для L'Officiel. Неделя Вьетнама в Москве.", n:10, pre:'p06', start:2},
